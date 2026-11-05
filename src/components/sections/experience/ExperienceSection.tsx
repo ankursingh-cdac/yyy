@@ -37,10 +37,10 @@ export function ExperienceSection() {
   ];
 
   return (
-    <section className="py-20 sm:py-28 bg-deep-navy text-white relative overflow-hidden">
-      {/* Decorative Brand Orange Glow */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-brand-orange/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-orange/5 rounded-full blur-3xl pointer-events-none" />
+    <section className="py-20 sm:py-28 bg-[#24110A] text-white relative overflow-hidden">
+      {/* Decorative Brand Orange & Terracotta Warm Glows */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-brand-orange/15 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-terracotta/20 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-16">
@@ -48,7 +48,7 @@ export function ExperienceSection() {
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-[1.18] tracking-tight">
             The Authentic Rishikesh Ashram Experience
           </h2>
-          <p className="mt-4 font-sans text-base sm:text-lg text-white/80 font-normal leading-relaxed">
+          <p className="mt-4 font-sans text-base sm:text-lg text-[#F3EBE6]/85 font-normal leading-relaxed">
             Teacher training in Rishikesh is far more than a classroom course. It is an authentic immersion into a disciplined yogic lifestyle where the holy environment itself deepens your practice.
           </p>
         </div>
@@ -58,9 +58,9 @@ export function ExperienceSection() {
           {experiences.map((exp, idx) => (
             <div
               key={idx}
-              className="group flex flex-col bg-white/5 border border-white/10 rounded-xl overflow-hidden hover:bg-white/10 transition-all duration-300 hover:border-brand-orange/40 hover:-translate-y-1"
+              className="group flex flex-col bg-[#1A0C07] border border-[#3D1D13] rounded-xl overflow-hidden hover:bg-[#200F09] transition-all duration-300 hover:border-brand-orange/50 hover:-translate-y-1"
             >
-              <div className="relative aspect-[4/3] overflow-hidden bg-deep-navy">
+              <div className="relative aspect-[4/3] overflow-hidden bg-[#1A0C07]">
                 <Image
                   src={exp.image}
                   alt={exp.title}
@@ -68,8 +68,8 @@ export function ExperienceSection() {
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-deep-navy via-transparent to-transparent" />
-                <div className="absolute top-3 left-3 p-2 rounded-lg bg-deep-navy/80 backdrop-blur-md border border-white/10">
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1A0C07] via-transparent to-transparent" />
+                <div className="absolute top-3 left-3 p-2 rounded-lg bg-[#2A130C]/90 backdrop-blur-md border border-[#4D2417]">
                   {exp.icon}
                 </div>
               </div>
@@ -79,7 +79,7 @@ export function ExperienceSection() {
                   <h3 className="font-serif text-xl sm:text-2xl font-bold text-white mb-2 leading-snug">
                     {exp.title}
                   </h3>
-                  <p className="font-sans text-xs sm:text-sm text-white/75 leading-relaxed">
+                  <p className="font-sans text-xs sm:text-sm text-[#F3EBE6]/80 leading-relaxed">
                     {exp.description}
                   </p>
                 </div>
@@ -89,8 +89,8 @@ export function ExperienceSection() {
         </div>
 
         {/* Daily Ashram Schedule Preview */}
-        <div className="mt-16 p-8 rounded-xl bg-white/5 border border-white/10 max-w-4xl mx-auto">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-white/10 pb-5 mb-6 text-center sm:text-left">
+        <div className="mt-16 p-8 rounded-xl bg-[#1A0C07] border border-[#3D1D13] max-w-4xl mx-auto shadow-lg">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-[#3D1D13] pb-5 mb-6 text-center sm:text-left">
             <div>
               <span className="text-xs font-sans uppercase tracking-widest text-brand-orange font-bold">
                 Daily Ashram Sadhana
@@ -99,27 +99,27 @@ export function ExperienceSection() {
                 A Day in the Life of a Yoga Student
               </h4>
             </div>
-            <span className="text-xs font-sans text-white/70">
+            <span className="text-xs font-sans text-[#F3EBE6]/70">
               Monday to Saturday • Sundays Rest &amp; Excursions
             </span>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-xs font-sans">
-            <div className="p-3.5 rounded-lg bg-white/5 border border-white/5">
+            <div className="p-3.5 rounded-lg bg-[#24110A] border border-[#3D1D13]">
               <span className="text-brand-orange font-bold block mb-1">05:30 AM – 07:00 AM</span>
-              <span className="text-white font-medium block">Morning Cleansing &amp; Pranayama</span>
+              <span className="text-[#F3EBE6] font-medium block">Morning Cleansing &amp; Pranayama</span>
             </div>
-            <div className="p-3.5 rounded-lg bg-white/5 border border-white/5">
+            <div className="p-3.5 rounded-lg bg-[#24110A] border border-[#3D1D13]">
               <span className="text-brand-orange font-bold block mb-1">07:00 AM – 08:30 AM</span>
-              <span className="text-white font-medium block">Hatha Yoga / Ashtanga Flow</span>
+              <span className="text-[#F3EBE6] font-medium block">Hatha Yoga / Ashtanga Flow</span>
             </div>
-            <div className="p-3.5 rounded-lg bg-white/5 border border-white/5">
+            <div className="p-3.5 rounded-lg bg-[#24110A] border border-[#3D1D13]">
               <span className="text-brand-orange font-bold block mb-1">09:00 AM – 10:00 AM</span>
-              <span className="text-white font-medium block">Sattvic Ayurvedic Breakfast</span>
+              <span className="text-[#F3EBE6] font-medium block">Sattvic Ayurvedic Breakfast</span>
             </div>
-            <div className="p-3.5 rounded-lg bg-white/5 border border-white/5">
+            <div className="p-3.5 rounded-lg bg-[#24110A] border border-[#3D1D13]">
               <span className="text-brand-orange font-bold block mb-1">11:00 AM – 01:00 PM</span>
-              <span className="text-white font-medium block">Anatomy &amp; Philosophy Lecture</span>
+              <span className="text-[#F3EBE6] font-medium block">Anatomy &amp; Philosophy Lecture</span>
             </div>
           </div>
         </div>

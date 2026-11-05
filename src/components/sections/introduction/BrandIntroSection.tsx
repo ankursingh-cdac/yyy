@@ -20,7 +20,7 @@ export function BrandIntroSection() {
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-deep-navy/60 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#24110A]/70 via-transparent to-transparent" />
             </div>
 
             {/* Overlapping Floating Ashram Badge */}

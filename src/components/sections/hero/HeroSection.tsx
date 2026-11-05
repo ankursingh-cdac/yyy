@@ -17,37 +17,38 @@ export function HeroSection() {
   };
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-deep-navy">
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-[#24110A]">
       {/* Background Cinematic Authentic Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src={heroAssets.himalayasGanga}
-          alt="Sacred River Ganga and Himalayan foothills at Aadi Yoga School Rishikesh"
+          src={heroAssets.rishikeshValley}
+          alt="Panoramic view of Rishikesh Himalayan foothills and holy Ganga"
           fill
           priority
           sizes="100vw"
           className="object-cover object-center scale-105 transition-transform duration-1000 ease-out"
         />
-        {/* Multi-layered Deep Navy Gradient Overlay for Crisp Text Contrast */}
-        <div className="absolute inset-0 bg-gradient-to-r from-deep-navy/90 via-deep-navy/75 to-deep-navy/85" />
-        <div className="absolute inset-0 bg-gradient-to-t from-deep-navy via-transparent to-black/40" />
+        {/* Warm Ashram Sunset & Terracotta Vignette Overlay (Zero Blue) */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#24110A]/95 via-[#3D1A10]/85 to-[#1F0E09]/90" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#24110A] via-transparent to-[#180A05]/50" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-brand-orange/20 via-transparent to-transparent pointer-events-none" />
       </div>
 
       {/* Hero Content Container */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 text-center text-white flex flex-col items-center">
-        {/* Location & Yoga Alliance Accreditation Pill */}
-        {/* <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs sm:text-sm font-sans font-semibold tracking-wider uppercase text-white mb-8 animate-in fade-in duration-700">
-          <MapPin className="w-4 h-4 text-brand-orange" />
-          <span>Rishikesh, Himalayas • Yoga Alliance USA Certified (RYS)</span>
-        </div> */}
+      
 
         {/* Grand Headline */}
         <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-white max-w-4xl mb-6">
-          Transform Your Practice in the Yoga Capital of the World
+          Transform Your Practice in the{" "}
+          <span className="text-brand-orange underline decoration-brand-orange/40 underline-offset-8">
+            Yoga Capital
+          </span>{" "}
+          of the World
         </h1>
 
         {/* Subtitle */}
-        <p className="font-sans text-base sm:text-xl md:text-2xl font-normal text-white/90 max-w-3xl leading-relaxed mb-10">
+        <p className="font-sans text-base sm:text-xl md:text-2xl font-normal text-[#FBF8F5] max-w-3xl leading-relaxed mb-10">
           Authentic 100h, 200h, and 300h Yoga Teacher Training &amp; Himalayan Retreats on the sacred banks of River Ganga in Rishikesh, India.
         </p>
 
@@ -57,7 +58,7 @@ export function HeroSection() {
             onClick={handleOpenEnquiry}
             variant="orange"
             size="lg"
-            className="w-full sm:w-auto text-white shadow-lg"
+            className="w-full sm:w-auto text-white shadow-lg cursor-pointer transform hover:-translate-y-0.5"
             icon={<ArrowRight className="w-4 h-4" />}
           >
             Explore Programs &amp; Fees
@@ -67,7 +68,7 @@ export function HeroSection() {
             href="#courses"
             variant="outline-white"
             size="lg"
-            className="w-full sm:w-auto"
+            className="w-full sm:w-auto border-white/30 text-white hover:bg-white/10 hover:border-brand-orange/60"
           >
             View 2026 Batch Dates
           </SecondaryButton>

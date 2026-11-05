@@ -31,11 +31,11 @@ export function CourseCard({ course }: CourseCardProps) {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-deep-navy/70 via-deep-navy/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#24110A]/85 via-[#24110A]/30 to-transparent" />
 
         {/* Badges Overlay */}
         <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between gap-2">
-          <span className="px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-white/95 text-deep-navy backdrop-blur-sm border border-border-light shadow-xs">
+          <span className="px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-white/95 text-charcoal backdrop-blur-sm border border-border-light shadow-xs">
             {course.duration}
           </span>
           {course.hours && (
@@ -52,7 +52,7 @@ export function CourseCard({ course }: CourseCardProps) {
             <Calendar className="w-3.5 h-3.5 text-brand-orange" />
             <span>Batch: {course.upcomingBatch}</span>
           </span>
-          <span className="font-sans font-semibold text-brand-orange bg-deep-navy/80 px-2 py-0.5 rounded text-[11px]">
+          <span className="font-sans font-semibold text-brand-orange bg-[#24110A]/85 px-2 py-0.5 rounded text-[11px]">
             {course.level}
           </span>
         </div>

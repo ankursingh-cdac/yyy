@@ -1,26 +1,32 @@
 /**
  * Aadi Yoga – Centralized Brand Design Tokens
  * 
- * Strict adherence required: Do not introduce arbitrary colors or fonts.
+ * Strict adherence required: No cold blue or AI-style neon colors.
  * Reference: Authentic Aadi Yoga School branding (aadiyogaschool.com)
+ * Warm Saffron Orange (#F58220), Faded Red / Terracotta (#C3512F, #A83C24), and Deep Warm Earth (#24110A).
  */
 
 export const BRAND_COLORS = {
-  // Primary
+  // Primary Warm Saffron Orange
   brandOrange: "#F58220",       // Primary brand color, logo emblem, buttons, action highlights
   brandOrangeHover: "#D96E14",  // WCAG compliant hover state
   brandOrangeLight: "#FFF4EB",  // Soft tint for badges and highlights
   
-  // Secondary / Contrasting
-  deepNavy: "#14213D",          // Dark hero overlays, editorial dark banners, global footer
-  brandTerracotta: "#C3512F",   // Fee tables, schedule highlights
-  neutralLight: "#F5F6F8",      // Contemporary light background
-  charcoal: "#242424",          // Primary dark body text and headings
-  mutedSlate: "#666666",        // Secondary descriptions, metadata
+  // Warm Faded Red & Terracotta
+  brandTerracotta: "#C3512F",       // Fee tables, schedule highlights, badges
+  brandTerracottaDark: "#8F2F14",   // Darker terracotta accent
+  brandFadedRed: "#A83C24",         // Warm faded red
   
-  // Surfaces & Outlines
-  white: "#FFFFFF",             // Card surfaces, containers
-  borderLight: "#E5E7EB",       // Subtle dividers and outlines
+  // Deep Warm Earth & Ashram Tone (Zero Blue)
+  deepEarth: "#24110A",         // Deep warm ashram mahogany/earth for contrast sections, overlays, footer
+  deepNavy: "#24110A",          // Replaced by deep warm earth (no cold navy)
+  
+  // Surfaces & Text
+  neutralLight: "#FAF9F6",      // Warm organic linen page background
+  charcoal: "#261D1A",          // Warm espresso charcoal for body text and headings
+  mutedSlate: "#6B5E59",        // Warm muted text, metadata
+  white: "#FFFFFF",             // Crisp card surfaces, containers
+  borderLight: "#EBE5E0",       // Subtle warm outlines
 } as const;
 
 export const TYPOGRAPHY = {

@@ -14,13 +14,13 @@ export function CtaSection() {
   };
 
   return (
-    <section className="py-20 sm:py-28 bg-deep-navy text-white relative overflow-hidden">
+    <section className="py-20 sm:py-28 bg-[#24110A] text-white relative overflow-hidden">
       {/* Background Decorative Rings with Brand Orange Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] sm:w-[900px] h-[600px] sm:h-[900px] border border-brand-orange/10 rounded-full pointer-events-none" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] border border-white/5 rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] sm:w-[900px] h-[600px] sm:h-[900px] border border-brand-orange/20 rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] border border-brand-terracotta/20 rounded-full pointer-events-none" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-xs sm:text-sm font-sans font-bold tracking-wider uppercase text-brand-orange mb-6">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-orange/20 border border-brand-orange/40 text-xs sm:text-sm font-sans font-bold tracking-wider uppercase text-brand-orange mb-6 shadow-xs">
           <Sparkles className="w-4 h-4" />
           <span>Your Sadhana Awaits in Rishikesh</span>
         </div>
@@ -29,7 +29,7 @@ export function CtaSection() {
           Begin Your Yogic Journey Beside the Holy Ganga.
         </h2>
 
-        <p className="font-sans text-base sm:text-lg text-white/85 font-normal leading-relaxed max-w-2xl mb-10">
+        <p className="font-sans text-base sm:text-lg text-[#F3EBE6]/85 font-normal leading-relaxed max-w-2xl mb-10">
           Step onto the sacred soil of Rishikesh near Laxman Jhula. Whether you aspire to become an internationally certified yoga teacher or seek personal revitalization, our ashram doors are open to you.
         </p>
 
@@ -48,7 +48,7 @@ export function CtaSection() {
             href={siteConfig.contact.whatsappHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-md font-sans font-bold text-sm md:text-base uppercase tracking-wider border border-white/30 text-white hover:border-white hover:bg-white/10 transition-all cursor-pointer active:scale-95"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-md font-sans font-bold text-sm md:text-base uppercase tracking-wider border border-white/30 text-white hover:border-brand-orange/60 hover:bg-white/10 transition-all cursor-pointer active:scale-95"
           >
             <MessageCircle className="w-4 h-4 text-emerald-400" />
             <span>Chat on WhatsApp</span>
@@ -56,7 +56,7 @@ export function CtaSection() {
         </div>
 
         {/* Direct Contact Info */}
-        <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-6 text-xs sm:text-sm text-white/75 font-sans">
+        <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-6 text-xs sm:text-sm text-[#F3EBE6]/75 font-sans">
           <div className="flex items-center gap-2">
             <Phone className="w-3.5 h-3.5 text-brand-orange" />
             <span>Direct Call:</span>

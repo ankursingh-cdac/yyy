@@ -15,7 +15,7 @@ export function EyebrowLabel({
   const variantStyles = {
     orange: "text-brand-orange bg-brand-orange-light/80 border-brand-orange/30",
     terracotta: "text-brand-terracotta bg-[#FFF0EB] border-brand-terracotta/30",
-    navy: "text-deep-navy bg-neutral-light border-border-light",
+    navy: "text-[#24110A] bg-neutral-light border-border-light",
     white: "text-white bg-white/10 border-white/20",
     sage: "text-brand-orange bg-brand-orange-light/80 border-brand-orange/30",
     ivory: "text-white bg-white/10 border-white/20",

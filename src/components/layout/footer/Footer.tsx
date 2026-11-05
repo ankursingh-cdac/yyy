@@ -58,10 +58,10 @@ function TwitterIcon({ className = "w-4 h-4" }: { className?: string }) {
 
 export function Footer() {
   return (
-    <footer className="bg-deep-navy text-white border-t border-white/10 pt-16 pb-12">
+    <footer className="bg-[#24110A] text-[#F3EBE6] border-t border-[#3D1D13] pt-16 pb-12">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-14 border-b border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-14 border-b border-[#3D1D13]">
           {/* Brand Column (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
             <Link href="/" className="inline-block">
@@ -76,12 +76,12 @@ export function Footer() {
               </div>
             </Link>
 
-            <p className="font-sans text-sm text-white/80 leading-relaxed max-w-md">
+            <p className="font-sans text-sm text-[#F3EBE6]/80 leading-relaxed max-w-md">
               A premier traditional yoga school located near 13 Stories Temple, Laxman Jhula, Rishikesh, on the holy banks of River Ganga. Offering authentic Yoga Alliance USA certified 100h, 200h, 300h Yoga Teacher Training Courses (YTTC) and Himalayan retreats.
             </p>
 
             {/* Yoga Alliance Badge */}
-            <div className="p-3.5 rounded-lg bg-white/5 border border-white/10 max-w-md flex items-center gap-4">
+            <div className="p-3.5 rounded-lg bg-[#1A0C07] border border-[#3D1D13] max-w-md flex items-center gap-4">
               <div className="relative w-24 h-11 shrink-0 bg-white rounded p-1">
                 <Image
                   src={brandAssets.yogaAlliance}
@@ -92,10 +92,10 @@ export function Footer() {
                 />
               </div>
               <div>
-                <div className="font-serif text-sm font-bold text-white">
+                <div className="font-serif text-sm font-bold text-[#F3EBE6]">
                   Yoga Alliance USA Registered (RYS)
                 </div>
-                <div className="text-xs font-sans text-white/70">
+                <div className="text-xs font-sans text-[#F3EBE6]/70">
                   Internationally accredited RYS 200 &amp; RYS 300 school
                 </div>
               </div>
@@ -107,7 +107,7 @@ export function Footer() {
                 href={siteConfig.social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-md bg-white/5 hover:bg-brand-orange hover:text-white flex items-center justify-center transition-colors text-white/90"
+                className="w-9 h-9 rounded-md bg-[#3D1D13] hover:bg-brand-orange hover:text-white flex items-center justify-center transition-colors text-[#F3EBE6]"
                 aria-label="Aadi Yoga Instagram"
               >
                 <InstagramIcon className="w-4 h-4" />
@@ -116,7 +116,7 @@ export function Footer() {
                 href={siteConfig.social.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-md bg-white/5 hover:bg-brand-orange hover:text-white flex items-center justify-center transition-colors text-white/90"
+                className="w-9 h-9 rounded-md bg-[#3D1D13] hover:bg-brand-orange hover:text-white flex items-center justify-center transition-colors text-[#F3EBE6]"
                 aria-label="Aadi Yoga Facebook"
               >
                 <FacebookIcon className="w-4 h-4" />
@@ -125,7 +125,7 @@ export function Footer() {
                 href={siteConfig.social.youtube}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-md bg-white/5 hover:bg-brand-orange hover:text-white flex items-center justify-center transition-colors text-white/90"
+                className="w-9 h-9 rounded-md bg-[#3D1D13] hover:bg-brand-orange hover:text-white flex items-center justify-center transition-colors text-[#F3EBE6]"
                 aria-label="Aadi Yoga YouTube Channel"
               >
                 <YoutubeIcon className="w-4 h-4" />
@@ -134,7 +134,7 @@ export function Footer() {
                 href={siteConfig.social.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-md bg-white/5 hover:bg-brand-orange hover:text-white flex items-center justify-center transition-colors text-white/90"
+                className="w-9 h-9 rounded-md bg-[#3D1D13] hover:bg-brand-orange hover:text-white flex items-center justify-center transition-colors text-[#F3EBE6]"
                 aria-label="Aadi Yoga LinkedIn"
               >
                 <LinkedinIcon className="w-4 h-4" />
@@ -143,7 +143,7 @@ export function Footer() {
                 href={siteConfig.social.twitter}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-md bg-white/5 hover:bg-brand-orange hover:text-white flex items-center justify-center transition-colors text-white/90"
+                className="w-9 h-9 rounded-md bg-[#3D1D13] hover:bg-brand-orange hover:text-white flex items-center justify-center transition-colors text-[#F3EBE6]"
                 aria-label="Aadi Yoga Twitter"
               >
                 <TwitterIcon className="w-4 h-4" />
@@ -161,7 +161,7 @@ export function Footer() {
                 <li key={item.title}>
                   <Link
                     href={item.href}
-                    className="text-white/80 hover:text-brand-orange transition-colors block py-0.5"
+                    className="text-[#F3EBE6]/80 hover:text-brand-orange transition-colors block py-0.5"
                   >
                     {item.title}
                   </Link>
@@ -180,7 +180,7 @@ export function Footer() {
                 <li key={item.title}>
                   <Link
                     href={item.href}
-                    className="text-white/80 hover:text-brand-orange transition-colors block py-0.5"
+                    className="text-[#F3EBE6]/80 hover:text-brand-orange transition-colors block py-0.5"
                   >
                     {item.title}
                   </Link>
@@ -194,7 +194,7 @@ export function Footer() {
             <h4 className="font-serif text-base font-bold text-brand-orange tracking-wider uppercase">
               Ashram Location
             </h4>
-            <div className="space-y-3 text-sm font-sans text-white/85">
+            <div className="space-y-3 text-sm font-sans text-[#F3EBE6]/85">
               <div className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-brand-orange shrink-0 mt-1" />
                 <address className="not-italic leading-relaxed text-xs sm:text-sm">
@@ -241,7 +241,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Copyright & Legal Links */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-sans text-white/60">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-sans text-[#F3EBE6]/60">
           <div>
             © {new Date().getFullYear()} Aadi Yoga School. All Rights Reserved.
           </div>

@@ -36,10 +36,10 @@ export function MobileNavigation() {
       role="dialog"
       aria-modal="true"
       aria-label="Mobile Navigation"
-      className="fixed inset-0 z-50 lg:hidden flex flex-col bg-deep-navy text-white animate-in slide-in-from-right duration-300"
+      className="fixed inset-0 z-50 lg:hidden flex flex-col bg-[#24110A] text-white animate-in slide-in-from-right duration-300"
     >
       {/* Top Bar with Emblem and Close Button */}
-      <div className="flex items-center justify-between px-6 py-4 border-b border-white/10 bg-[#0E172B]">
+      <div className="flex items-center justify-between px-6 py-4 border-b border-[#3D1D13] bg-[#1A0C07]">
         <Link href="/" onClick={handleClose} className="flex items-center gap-3">
           <div className="relative w-10 h-10 shrink-0">
             <Image
@@ -72,7 +72,7 @@ export function MobileNavigation() {
       <div className="flex-1 overflow-y-auto px-6 py-6 space-y-6">
         <nav className="space-y-4">
           {mainNavItems.map((item) => (
-            <div key={item.title} className="border-b border-white/5 pb-3">
+            <div key={item.title} className="border-b border-[#3D1D13]/60 pb-3">
               <Link
                 href={item.href}
                 onClick={handleClose}
@@ -82,13 +82,13 @@ export function MobileNavigation() {
                 <ArrowRight className="w-4 h-4 text-brand-orange/60" />
               </Link>
               {item.children && (
-                <div className="pl-4 mt-2 space-y-2 border-l border-white/10">
+                <div className="pl-4 mt-2 space-y-2 border-l border-[#3D1D13]">
                   {item.children.map((child) => (
                     <Link
                       key={child.title}
                       href={child.href}
                       onClick={handleClose}
-                      className="block text-sm font-sans text-white/75 hover:text-brand-orange py-1 transition-colors"
+                      className="block text-sm font-sans text-[#F3EBE6]/80 hover:text-brand-orange py-1 transition-colors"
                     >
                       {child.title}
                     </Link>
@@ -112,7 +112,7 @@ export function MobileNavigation() {
           </Link>
 
           {/* Contact Box */}
-          <div className="p-4 rounded-xl bg-white/5 border border-white/10 space-y-3">
+          <div className="p-4 rounded-xl bg-[#1A0C07] border border-[#3D1D13] space-y-3">
             <div className="text-xs font-bold uppercase tracking-wider text-brand-orange flex items-center gap-1.5">
               <Sparkles className="w-3.5 h-3.5" />
               <span>Direct Rishikesh Ashram Desk</span>
@@ -120,7 +120,7 @@ export function MobileNavigation() {
             <div className="flex flex-col gap-2.5 text-sm">
               <a
                 href={siteConfig.contact.phoneHref}
-                className="flex items-center gap-2.5 text-white/90 hover:text-brand-orange transition-colors"
+                className="flex items-center gap-2.5 text-[#F3EBE6]/90 hover:text-brand-orange transition-colors"
               >
                 <Phone className="w-4 h-4 text-brand-orange" />
                 <span>{siteConfig.contact.phone}</span>
@@ -129,7 +129,7 @@ export function MobileNavigation() {
                 href={siteConfig.contact.whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2.5 text-white/90 hover:text-brand-orange transition-colors"
+                className="flex items-center gap-2.5 text-[#F3EBE6]/90 hover:text-brand-orange transition-colors"
               >
                 <MessageCircle className="w-4 h-4 text-emerald-400" />
                 <span>WhatsApp Instant Chat</span>
@@ -140,7 +140,7 @@ export function MobileNavigation() {
       </div>
 
       {/* Footer Info */}
-      <div className="px-6 py-4 border-t border-white/10 text-center text-xs text-white/60 bg-[#0E172B]">
+      <div className="px-6 py-4 border-t border-[#3D1D13] text-center text-xs text-[#F3EBE6]/60 bg-[#1A0C07]">
         Laxman Jhula, Rishikesh • Yoga Alliance USA RYS
       </div>
     </div>

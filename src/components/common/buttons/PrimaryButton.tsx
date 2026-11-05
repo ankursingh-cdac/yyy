@@ -37,7 +37,7 @@ export function PrimaryButton({
   const variantStyles = {
     orange:
       "bg-brand-orange text-white hover:bg-brand-orange-hover border border-brand-orange shadow-sm hover:shadow",
-    navy: "bg-deep-navy text-white hover:bg-[#0d1629] border border-deep-navy shadow-sm",
+    navy: "bg-[#24110A] text-white hover:bg-[#36170D] border border-[#24110A] shadow-sm",
     forest: "bg-brand-orange text-white hover:bg-brand-orange-hover border border-brand-orange shadow-sm",
     sand: "bg-white text-charcoal hover:bg-neutral-light border border-border-light shadow-sm",
     ivory: "bg-white text-brand-orange hover:bg-brand-orange-light border border-brand-orange/30 shadow-sm",

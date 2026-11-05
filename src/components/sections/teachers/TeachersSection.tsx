@@ -31,10 +31,10 @@ export function TeachersSection() {
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-deep-navy/70 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#24110A]/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
 
                 {teacher.experienceYears && (
-                  <div className="absolute bottom-3 left-3 px-3 py-1 rounded-md text-[11px] font-sans font-bold tracking-wider uppercase bg-white/95 text-deep-navy backdrop-blur-sm border border-border-light shadow-2xs">
+                  <div className="absolute bottom-3 left-3 px-3 py-1 rounded-md text-[11px] font-sans font-bold tracking-wider uppercase bg-white/95 text-charcoal backdrop-blur-sm border border-border-light shadow-2xs">
                     {teacher.experienceYears}+ Years Sadhana
                   </div>
                 )}

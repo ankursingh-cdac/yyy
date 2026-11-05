@@ -22,25 +22,26 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 - **Location**: Rishikesh, Uttarakhand, India (Near 13 Stories Temple, Laxman Jhula)
 - **Official Domain**: `https://aadiyogaschool.com/`
 - **Category**: Yoga School, Yoga Alliance USA RYS, Yoga Teacher Training (100h, 200h, 300h YTTC), Yoga Retreats & Himalayan Wellness Education.
-- **Approved Aesthetic Direction**: **AUTHENTIC BRAND IDENTITY + TAILWIND UI EDITORIAL POLISH**.
+- **Approved Aesthetic Direction**: **AUTHENTIC ASHRAM BRAND IDENTITY + TAILWIND UI EDITORIAL POLISH**.
   - Evokes: Real ashram life in Rishikesh, sacred River Ganga, certified Himalayan yoga lineage, pure energy of yoga sadhana.
-  - Core Brand Identity: **Brand Orange (`#F58220`)** from official emblem and horizontal logo, balanced by **Deep Navy (`#14213D`)** for editorial depth and **Neutral Light (`#F5F6F8`)** for clarity.
-  - NEVER looks like: A generic green AI template or bootstrap gym site.
+  - Core Brand Identity: **Brand Saffron Orange (`#F58220`)** from official emblem, balanced by **Faded Red / Terracotta (`#C3512F`, `#A83C24`)** and **Deep Warm Earth / Ashram Mahogany (`#24110A`)** for spiritual grounding, with **Warm Organic Linen (`#FAF9F6`)** for page background.
+  - STRICT PROHIBITION: NEVER use cold blueish colors (`#14213D` or generic blues). NEVER look like a generic green AI template or bootstrap gym site.
 
 ---
 
 ## 2. Permanent Brand Tokens
 Never use hardcoded arbitrary colors. Always use CSS variables and Tailwind classes:
-- **Brand Orange (`#F58220`)**: Primary brand color, logo emblem, key buttons, highlights (`bg-brand-orange`, `text-brand-orange`)
+- **Brand Saffron Orange (`#F58220`)**: Primary brand color, logo emblem, key buttons, highlights (`bg-brand-orange`, `text-brand-orange`)
 - **Brand Orange Hover (`#D96E14`)**: WCAG-compliant hover state (`hover:bg-brand-orange-hover`)
 - **Brand Orange Light (`#FFF4EB`)**: Subtle badge backgrounds and accent cards (`bg-brand-orange-light`)
-- **Deep Navy (`#14213D`)**: Contrast overlays, editorial dark banners, global footer (`bg-deep-navy`, `text-deep-navy`)
+- **Deep Warm Earth / Ashram Mahogany (`#24110A`)**: Contrast overlays, hero vignette, editorial dark sections, global footer (`bg-deep-earth`, `text-white`)
 - **Brand Terracotta (`#C3512F`)**: Fee tables, schedule headers, secondary highlights (`bg-brand-terracotta`)
-- **Neutral Light Background (`#F5F6F8`)**: Primary page background (`bg-neutral-light`)
-- **White (`#FFFFFF`)**: Card surfaces, containers (`bg-white`)
-- **Dark Charcoal (`#242424`)**: Main body text and headings (`text-charcoal`)
-- **Muted Slate (`#666666`)**: Subtitles, metadata, captions (`text-muted-slate`)
-- **Light Border (`#E5E7EB`)**: Subtle dividers and borders (`border-border-light`)
+- **Brand Faded Red / Gerua (`#A83C24`)**: Warm spiritual red accent, decorative glows (`bg-brand-faded-red`)
+- **Warm Organic Linen Background (`#FAF9F6`)**: Primary page background (`bg-neutral-light`)
+- **Surface White (`#FFFFFF`)**: Card surfaces, containers (`bg-white`)
+- **Espresso Charcoal (`#261D1A`)**: Main body text and headings (`text-charcoal`)
+- **Muted Earth Slate (`#6B5E59`)**: Subtitles, metadata, captions (`text-muted-slate`)
+- **Warm Light Border (`#EBE5E0`)**: Subtle dividers and borders (`border-border-light`)
 
 ---
 

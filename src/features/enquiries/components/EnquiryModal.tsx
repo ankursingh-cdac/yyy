@@ -76,14 +76,14 @@ export function EnquiryModal() {
       role="dialog"
       aria-modal="true"
       aria-labelledby="enquiry-modal-title"
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-deep-navy/80 backdrop-blur-sm animate-in fade-in duration-200"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-[#1A0C07]/80 backdrop-blur-sm animate-in fade-in duration-200"
     >
       {/* Backdrop click */}
       <div className="absolute inset-0" onClick={handleClose} />
 
       <div className="relative w-full max-w-xl bg-white border border-border-light rounded-xl shadow-2xl overflow-hidden z-10 max-h-[90vh] flex flex-col">
         {/* Header */}
-        <div className="px-6 py-5 bg-deep-navy text-white flex items-center justify-between border-b border-white/10">
+        <div className="px-6 py-5 bg-[#24110A] text-white flex items-center justify-between border-b border-[#3D1D13]">
           <div>
             <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-brand-orange">
               <Sparkles className="w-3.5 h-3.5" />

@@ -31,8 +31,8 @@ export function Header() {
 
   return (
     <>
-      {/* Top Editorial Notification Strip */}
-      <div className="bg-deep-navy text-white text-[11px] sm:text-xs py-2 px-4 border-b border-white/10 tracking-wide font-sans">
+      {/* Top Editorial Notification Strip (Warm Ashram Earth - Zero Blue) */}
+      <div className="bg-[#2A130C] text-[#F3EBE6] text-[11px] sm:text-xs py-2 px-4 border-b border-[#3D1D13] tracking-wide font-sans">
         <div className="max-w-[1440px] mx-auto flex items-center justify-between">
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-brand-orange animate-pulse shrink-0" />
@@ -40,7 +40,7 @@ export function Header() {
               Yoga Alliance USA RYS Certified School • Rishikesh, India
             </span>
           </div>
-          <div className="hidden md:flex items-center gap-5 text-white/90 shrink-0">
+          <div className="hidden md:flex items-center gap-5 text-[#F3EBE6]/90 shrink-0">
             <a
               href={siteConfig.contact.phoneHref}
               className="flex items-center gap-1.5 hover:text-brand-orange transition-colors"
@@ -48,8 +48,8 @@ export function Header() {
               <Phone className="w-3.5 h-3.5 text-brand-orange" />
               <span>{siteConfig.contact.phone}</span>
             </a>
-            <span className="text-white/30">|</span>
-            <span className="text-white/80">Laxman Jhula, Rishikesh</span>
+            <span className="text-white/20">|</span>
+            <span className="text-[#F3EBE6]/80">Laxman Jhula, Rishikesh</span>
           </div>
         </div>
       </div>
@@ -59,7 +59,7 @@ export function Header() {
         className={cn(
           "sticky top-0 z-40 w-full transition-all duration-300",
           isScrolled
-            ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-border-light py-2.5"
+            ? "bg-white/95 backdrop-blur-md shadow-xs border-b border-border-light py-2.5"
             : "bg-white/90 backdrop-blur-xs border-b border-border-light/70 py-3.5"
         )}
       >
@@ -125,7 +125,7 @@ export function Header() {
             })}
           </nav>
 
-          {/* User Account / Login CTA (Right - Requested by User) */}
+          {/* User Account / Login CTA (Right) */}
           <div className="flex items-center gap-3 shrink-0 ml-auto">
             {/* Direct WhatsApp Quick Chat (Desktop wide) */}
             <a
@@ -138,7 +138,7 @@ export function Header() {
               <span>WhatsApp</span>
             </a>
 
-            {/* Login Button (Brand Orange, No Wrap) */}
+            {/* Login Button (Brand Orange, Never Wraps) */}
             <Link
               href="/login"
               className="inline-flex items-center gap-2 px-4 xl:px-5 py-2 rounded-md text-xs xl:text-sm font-semibold bg-brand-orange hover:bg-brand-orange-hover text-white shadow-xs transition-all duration-200 cursor-pointer whitespace-nowrap shrink-0 transform hover:-translate-y-0.5"

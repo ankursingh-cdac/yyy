@@ -2,18 +2,22 @@
 
 :root {
   /* ========================================================
-     AADI YOGA – AUTHENTIC BRAND COLOR SYSTEM
-     Verified from official logo and live aadiyogaschool.com
+     AADI YOGA – AUTHENTIC WARM BRAND SYSTEM
+     Sacred Rishikesh Orange & Warm Ashram Terracotta / Earth
+     NO COLD/AI BLUE. 100% Warm, Organic, Spiritual Lineage.
      ======================================================== */
   --color-brand-orange: #F58220;
   --color-brand-orange-hover: #D96E14;
   --color-brand-orange-light: #FFF4EB;
-  --color-deep-navy: #14213D;
   --color-brand-terracotta: #C3512F;
-  --color-neutral-light: #F5F6F8;
-  --color-charcoal: #242424;
-  --color-muted-slate: #666666;
-  --color-border-light: #E5E7EB;
+  --color-brand-terracotta-dark: #8F2F14;
+  --color-brand-faded-red: #A83C24;
+  --color-deep-earth: #24110A;      /* Rich warm ashram mahogany/terracotta base (replaces all cold navy) */
+  --color-deep-navy: #24110A;       /* Alias pointing to deep warm earth so zero blue is rendered */
+  --color-neutral-light: #FAF9F6;   /* Warm organic linen/light ashram neutral */
+  --color-charcoal: #261D1A;        /* Warm espresso charcoal for high contrast reading */
+  --color-muted-slate: #6B5E59;     /* Warm muted slate */
+  --color-border-light: #EBE5E0;    /* Warm subtle border */
   --color-white: #FFFFFF;
 
   /* Theme mappings */
@@ -32,8 +36,11 @@
   --color-brand-orange: var(--color-brand-orange);
   --color-brand-orange-hover: var(--color-brand-orange-hover);
   --color-brand-orange-light: var(--color-brand-orange-light);
-  --color-deep-navy: var(--color-deep-navy);
   --color-brand-terracotta: var(--color-brand-terracotta);
+  --color-brand-terracotta-dark: var(--color-brand-terracotta-dark);
+  --color-brand-faded-red: var(--color-brand-faded-red);
+  --color-deep-earth: var(--color-deep-earth);
+  --color-deep-navy: var(--color-deep-navy);
   --color-neutral-light: var(--color-neutral-light);
   --color-charcoal: var(--color-charcoal);
   --color-muted-slate: var(--color-muted-slate);
@@ -79,7 +86,7 @@ h1, h2, h3, h4, .font-serif {
   background: var(--color-neutral-light);
 }
 ::-webkit-scrollbar-thumb {
-  background: #CBD5E1;
+  background: #D9CEC7;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
