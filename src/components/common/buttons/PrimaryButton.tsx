@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 
 interface ButtonBaseProps {
   children: React.ReactNode;
-  variant?: "forest" | "sand" | "ivory";
+  variant?: "orange" | "navy" | "forest" | "sand" | "ivory";
   size?: "sm" | "md" | "lg";
   icon?: React.ReactNode;
   iconPosition?: "left" | "right";
@@ -20,7 +20,7 @@ export type PrimaryButtonProps = ButtonBaseProps &
 
 export function PrimaryButton({
   children,
-  variant = "forest",
+  variant = "orange",
   size = "md",
   icon,
   iconPosition = "right",
@@ -29,20 +29,22 @@ export function PrimaryButton({
   ...props
 }: PrimaryButtonProps) {
   const sizeStyles = {
-    sm: "px-4 py-2 text-xs uppercase tracking-wider",
-    md: "px-6 py-3.5 text-sm uppercase tracking-widest",
-    lg: "px-8 py-4 text-sm md:text-base uppercase tracking-widest",
+    sm: "px-3.5 py-2 text-xs font-semibold",
+    md: "px-5 py-2.5 text-sm font-semibold",
+    lg: "px-7 py-3.5 text-base font-semibold",
   };
 
   const variantStyles = {
-    forest:
-      "bg-forest-green text-warm-ivory hover:bg-[#122e26] border border-forest-green shadow-sm hover:shadow-md",
-    sand: "bg-warm-sand text-forest-green hover:bg-[#cfbfa4] border border-warm-sand",
-    ivory: "bg-warm-ivory text-forest-green hover:bg-white border border-warm-ivory shadow-sm",
+    orange:
+      "bg-brand-orange text-white hover:bg-brand-orange-hover border border-brand-orange shadow-sm hover:shadow",
+    navy: "bg-deep-navy text-white hover:bg-[#0d1629] border border-deep-navy shadow-sm",
+    forest: "bg-brand-orange text-white hover:bg-brand-orange-hover border border-brand-orange shadow-sm",
+    sand: "bg-white text-charcoal hover:bg-neutral-light border border-border-light shadow-sm",
+    ivory: "bg-white text-brand-orange hover:bg-brand-orange-light border border-brand-orange/30 shadow-sm",
   };
 
   const baseStyles = cn(
-    "inline-flex items-center justify-center gap-2.5 font-sans font-medium rounded-full transition-all duration-300 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-green/40 active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none cursor-pointer",
+    "inline-flex items-center justify-center gap-2 font-sans rounded-md transition-all duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange/50 active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none cursor-pointer",
     sizeStyles[size],
     variantStyles[variant],
     className

@@ -5,35 +5,42 @@ import { coursesData } from "@/data/courses";
 import { CourseCard } from "@/features/courses/components/CourseCard";
 import { SectionHeading } from "@/components/common/typography/SectionHeading";
 import { CourseCategory } from "@/types/course";
+import { useAppDispatch } from "@/store/hooks";
+import { openEnquiryModal } from "@/store/features/ui/uiSlice";
 import { cn } from "@/lib/utils";
 
 export function CoursesSection() {
+  const dispatch = useAppDispatch();
   const [activeTab, setActiveTab] = useState<"all" | CourseCategory>("all");
 
   const filteredCourses =
     activeTab === "all"
-      ? coursesData.filter((c) => c.isFeatured !== false)
+      ? coursesData
       : coursesData.filter((c) => c.category === activeTab);
 
+  const handleOpenConsultation = () => {
+    dispatch(openEnquiryModal("Course Syllabus & Counseling Consultation"));
+  };
+
   return (
-    <section id="courses" className="py-20 sm:py-28 bg-warm-sand/20 border-y border-light-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="courses" className="py-20 sm:py-28 bg-neutral-light border-y border-border-light">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          eyebrow="Certified Academic Programs"
-          eyebrowVariant="sage"
-          title="Yoga Teacher Training & Retreats"
-          subtitle="Internationally certified courses combining classical Hatha, Ashtanga Vinyasa, Pranayama, and Vedic Philosophy registered with Yoga Alliance, USA."
+          eyebrow="Certified Training &amp; Retreats"
+          eyebrowVariant="orange"
+          title="Yoga Teacher Training Courses &amp; Himalayan Retreats"
+          subtitle="Internationally certified courses in classical Hatha, Ashtanga Vinyasa, Pranayama, and Vedic Philosophy registered with Yoga Alliance, USA."
         />
 
-        {/* Category Tabs */}
+        {/* Category Filter Tabs */}
         <div className="flex items-center justify-center gap-2 sm:gap-3 mb-12 flex-wrap">
           <button
             onClick={() => setActiveTab("all")}
             className={cn(
-              "px-5 py-2.5 rounded-full text-xs sm:text-sm font-sans font-medium uppercase tracking-wider transition-all duration-200 cursor-pointer",
+              "px-5 py-2.5 rounded-md text-xs sm:text-sm font-sans font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer",
               activeTab === "all"
-                ? "bg-forest-green text-warm-ivory shadow-sm"
-                : "bg-white text-dark-charcoal/80 hover:bg-warm-ivory border border-light-border"
+                ? "bg-brand-orange text-white shadow-xs"
+                : "bg-white text-charcoal/80 hover:text-brand-orange hover:bg-neutral-light border border-border-light"
             )}
           >
             All Programs
@@ -41,21 +48,21 @@ export function CoursesSection() {
           <button
             onClick={() => setActiveTab("ttc")}
             className={cn(
-              "px-5 py-2.5 rounded-full text-xs sm:text-sm font-sans font-medium uppercase tracking-wider transition-all duration-200 cursor-pointer",
+              "px-5 py-2.5 rounded-md text-xs sm:text-sm font-sans font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer",
               activeTab === "ttc"
-                ? "bg-forest-green text-warm-ivory shadow-sm"
-                : "bg-white text-dark-charcoal/80 hover:bg-warm-ivory border border-light-border"
+                ? "bg-brand-orange text-white shadow-xs"
+                : "bg-white text-charcoal/80 hover:text-brand-orange hover:bg-neutral-light border border-border-light"
             )}
           >
-            Teacher Training (YTTC)
+            Teacher Training (100h, 200h, 300h)
           </button>
           <button
             onClick={() => setActiveTab("retreat")}
             className={cn(
-              "px-5 py-2.5 rounded-full text-xs sm:text-sm font-sans font-medium uppercase tracking-wider transition-all duration-200 cursor-pointer",
+              "px-5 py-2.5 rounded-md text-xs sm:text-sm font-sans font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer",
               activeTab === "retreat"
-                ? "bg-forest-green text-warm-ivory shadow-sm"
-                : "bg-white text-dark-charcoal/80 hover:bg-warm-ivory border border-light-border"
+                ? "bg-brand-orange text-white shadow-xs"
+                : "bg-white text-charcoal/80 hover:text-brand-orange hover:bg-neutral-light border border-border-light"
             )}
           >
             Himalayan Retreats
@@ -69,24 +76,21 @@ export function CoursesSection() {
           ))}
         </div>
 
-        {/* Bottom Accreditation Callout */}
-        <div className="mt-14 p-6 sm:p-8 rounded-2xl bg-white border border-light-border flex flex-col sm:flex-row items-center justify-between gap-6">
+        {/* Bottom Consultation Callout */}
+        <div className="mt-14 p-6 sm:p-8 rounded-xl bg-white border border-border-light shadow-2xs flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="text-center sm:text-left">
-            <h4 className="font-serif text-xl sm:text-2xl text-forest-green">
-              Unsure which training corresponds to your path?
+            <h4 className="font-serif text-xl sm:text-2xl font-bold text-charcoal">
+              Unsure which training level matches your experience?
             </h4>
-            <p className="font-sans text-xs sm:text-sm text-muted-text mt-1">
-              Connect with our master teachers to assess your background and select the right YTTC level.
+            <p className="font-sans text-xs sm:text-sm text-muted-slate mt-1">
+              Connect with our master teachers to evaluate your background and select between 100h, 200h, or 300h YTTC.
             </p>
           </div>
           <button
-            onClick={() => {
-              const el = document.getElementById("enquiry-trigger");
-              if (el) el.click();
-            }}
-            className="shrink-0 px-6 py-3 rounded-full text-xs font-semibold uppercase tracking-widest bg-forest-green text-warm-ivory hover:bg-[#122e26] transition-colors cursor-pointer shadow-sm"
+            onClick={handleOpenConsultation}
+            className="shrink-0 px-6 py-3 rounded-md text-xs font-bold uppercase tracking-wider bg-brand-orange hover:bg-brand-orange-hover text-white transition-all cursor-pointer shadow-xs active:scale-95"
           >
-            Request Syllabus & Consultation
+            Request Syllabus &amp; Dates
           </button>
         </div>
       </div>

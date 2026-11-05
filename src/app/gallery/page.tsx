@@ -18,13 +18,13 @@ export const metadata: Metadata = {
 export default function GalleryPage() {
   return (
     <div>
-      <div className="bg-forest-green text-warm-ivory py-16 sm:py-24 text-center">
+      <div className="bg-deep-navy text-white py-16 sm:py-24 text-center border-b border-white/10">
         <SectionContainer>
-          <EyebrowLabel text="Visual Sanctuary" variant="ivory" className="justify-center" />
-          <h1 className="font-serif text-4xl sm:text-6xl text-warm-ivory mt-2">
-            Ashram & Rishikesh Gallery
+          <EyebrowLabel text="Visual Sanctuary" variant="orange" className="justify-center" />
+          <h1 className="font-serif text-4xl sm:text-6xl font-bold text-white mt-2">
+            Ashram &amp; Rishikesh Gallery
           </h1>
-          <p className="font-sans text-base sm:text-lg text-warm-sand/90 max-w-2xl mx-auto mt-4 font-light leading-relaxed">
+          <p className="font-sans text-base sm:text-lg text-white/85 max-w-2xl mx-auto mt-4 font-normal leading-relaxed">
             Moments of meditation, physical practice, and communal joy in Rishikesh.
           </p>
         </SectionContainer>

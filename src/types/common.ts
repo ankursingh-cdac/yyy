@@ -25,7 +25,16 @@ export interface Testimonial {
 export interface GalleryItem {
   id: string;
   title: string;
-  category: "ashram" | "yoga-shala" | "nature" | "ceremony" | "community";
+  category:
+    | "training-class"
+    | "yoga-shala"
+    | "accommodation"
+    | "food"
+    | "location"
+    | "ashram"
+    | "nature"
+    | "ceremony"
+    | "community";
   image: string;
   alt: string;
   caption?: string;

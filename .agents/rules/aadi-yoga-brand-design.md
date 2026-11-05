@@ -1,75 +1,58 @@
 # Aadi Yoga – Brand & Design Guidelines
 
 ## 1. Brand Identity & Visual Direction
-- **Brand**: Aadi Yoga (Yoga School, Teacher Training & Retreats).
+- **Brand**: Aadi Yoga School (Yoga Teacher Training & Himalayan Retreats).
 - **Location**: Rishikesh, Uttarakhand, India (Banks of sacred River Ganga, near 13 Stories Temple, Laxman Jhula).
-- **Core Aesthetic**: **NATURE-INSPIRED VISUALS + PREMIUM EDITORIAL TYPOGRAPHY**.
+- **Official Domain**: `https://aadiyogaschool.com/`
+- **Core Aesthetic**: **AUTHENTIC BRAND IDENTITY + TAILWIND UI EDITORIAL POLISH**.
 - **Inspiration**:
-  - Himalayan foothills & mist
-  - Holy River Ganga & morning sunlight
-  - Green forests and tranquil ashram environments
-  - Traditional Indian spiritual heritage with contemporary editorial refinement
-- **Tone**: Calm, grounding, timeless, trustworthy, meditative, and authentic. Never look like a generic AI-generated template or neon fitness app.
+  - Genuine ashram sadhana in Rishikesh
+  - Sacred River Ganga and Himalayan peaks
+  - Authentic Brand Orange (`#F58220`) from original emblem and logo
+  - Deep Navy (`#14213D`) for editorial depth and contrast
+- **Tone**: Authentic, grounded, disciplined, serene, trustworthy. Never look like a generic bootstrap site or neon fitness app.
+
+---
 
 ## 2. Approved Color Palette (FINAL & PERMANENT)
 Do NOT introduce arbitrary hex codes. Always use centralized CSS variables and Tailwind color tokens:
 
 ### Primary Colors
-- **Warm Ivory (`#F7F4EC`)**: Primary background for pages and light surfaces. Evokes handmade paper and natural ashram walls.
-  - CSS Variable: `--color-warm-ivory` / Tailwind: `bg-warm-ivory`, `text-warm-ivory`
-- **Forest Green (`#183C32`)**: Primary brand anchor, primary action buttons, key editorial headings, dark contrast sections.
-  - CSS Variable: `--color-forest-green` / Tailwind: `bg-forest-green`, `text-forest-green`
+- **Brand Orange (`#F58220`)**: Primary brand anchor, logo emblem, key action buttons, price badges, and active tabs.
+  - CSS Variable: `--color-brand-orange` / Tailwind: `bg-brand-orange`, `text-brand-orange`
+- **Brand Orange Hover (`#D96E14`)**: WCAG 2.1 AA compliant darkened hover state for text contrast.
+  - CSS Variable: `--color-brand-orange-hover` / Tailwind: `hover:bg-brand-orange-hover`
+- **Brand Orange Light (`#FFF4EB`)**: Soft tinted pill and highlight backgrounds.
+  - CSS Variable: `--color-brand-orange-light` / Tailwind: `bg-brand-orange-light`
 
 ### Secondary Colors
-- **Sage Green (`#71816A`)**: Secondary accents, leaf motifs, subtle highlights, badges.
-  - CSS Variable: `--color-sage-green` / Tailwind: `bg-sage-green`, `text-sage-green`
-- **Warm Sand (`#DCCDB6`)**: Secondary backgrounds, cards, subtle divider accents, course info badges.
-  - CSS Variable: `--color-warm-sand` / Tailwind: `bg-warm-sand`, `text-warm-sand`
-- **Muted Terracotta (`#B8755B`)**: Limited decorative accents, spiritual accents (kumkum/clay), focus badges.
-  - CSS Variable: `--color-muted-terracotta` / Tailwind: `bg-muted-terracotta`, `text-muted-terracotta`
-- **Dark Charcoal (`#292C27`)**: Main body text, dark borders, deep contrast.
-  - CSS Variable: `--color-dark-charcoal` / Tailwind: `text-dark-charcoal`
+- **Deep Navy (`#14213D`)**: Editorial dark banners, hero contrast, global footer background.
+  - CSS Variable: `--color-deep-navy` / Tailwind: `bg-deep-navy`, `text-deep-navy`
+- **Brand Terracotta (`#C3512F`)**: Sourced from live fee schedule table headers.
+  - CSS Variable: `--color-brand-terracotta` / Tailwind: `bg-brand-terracotta`
+- **Neutral Light Background (`#F5F6F8`)**: Primary page background for clarity and legibility.
+  - CSS Variable: `--color-neutral-light` / Tailwind: `bg-neutral-light`
+- **Surface White (`#FFFFFF`)**: Card surfaces, containers, modals.
+  - CSS Variable: `--color-white` / Tailwind: `bg-white`
 
-### Supporting Colors
-- **White (`#FFFFFF`)**: Card surfaces, contrast overlays, modals.
-- **Light Border (`#E7E2D7`)**: Delicate borders, clean separation lines.
-  - CSS Variable: `--color-light-border` / Tailwind: `border-light-border`
-- **Muted Text (`#77796F`)**: Subtitles, metadata, dates, caption copy.
-  - CSS Variable: `--color-muted-text` / Tailwind: `text-muted-text`
+### Typography & Border Colors
+- **Dark Charcoal (`#242424`)**: Main body text and display headings.
+  - CSS Variable: `--color-charcoal` / Tailwind: `text-charcoal`
+- **Muted Slate (`#666666`)**: Subtitles, duration labels, teacher specialties, footer copy.
+  - CSS Variable: `--color-muted-slate` / Tailwind: `text-muted-slate`
+- **Border Light (`#E5E7EB`)**: Subtle dividers and card outlines.
+  - CSS Variable: `--color-border-light` / Tailwind: `border-border-light`
 
-### Strict Palette Rules
-1. Never replace Forest Green with neon or electric green.
-2. Never introduce purple, bright pink, or cyber gradients.
-3. No harsh drop shadows or neon glows; use soft, warm ambient shadows.
-4. Dark sections are permitted only in Forest Green (`#183C32`) or Dark Charcoal (`#292C27`) with Warm Ivory / White typography.
+---
 
 ## 3. Editorial Typography System
 - **Heading / Display Font**: `Cormorant Garamond` (Google Font via `next/font/google`, `font-serif`).
-  - Weights: Regular 400, Medium 500, Semi-bold 600, Italic 400.
-  - Style: Refined editorial letter spacing, generous line height, dignified presence.
+  - Weights: Regular 400, Medium 500, Semi-bold 600, Bold 700.
 - **Body / Interface Font**: `Manrope` (Google Font via `next/font/google`, `font-sans`).
-  - Weights: Light 300, Regular 400, Medium 500, Semi-bold 600.
-  - Style: High legibility, clean sans-serif geometry, crisp metadata.
+  - Weights: Regular 400, Medium 500, Semi-bold 600, Bold 700.
 
-### Typography Hierarchy Tokens
-- **Hero Display**: `text-4xl md:text-6xl lg:text-7xl font-serif font-normal leading-tight tracking-tight`
-- **Section Heading (H2)**: `text-3xl md:text-5xl font-serif font-normal leading-tight`
-- **Subheading (H3)**: `text-2xl md:text-3xl font-serif font-medium`
-- **Card Title (H4)**: `text-xl md:text-2xl font-serif font-medium`
-- **Eyebrow Label**: `text-xs uppercase tracking-[0.2em] font-sans font-semibold text-sage-green`
-- **Body Large**: `text-lg md:text-xl font-sans text-muted-text leading-relaxed`
-- **Body Regular**: `text-base font-sans text-dark-charcoal/90 leading-relaxed`
-- **Body Small / Meta**: `text-sm font-sans text-muted-text leading-normal`
+---
 
-## 4. Photography & Imagery Principles
-- Authentic photography of Rishikesh, River Ganga, the Himalayas, traditional yoga practice, and the Laxman Jhula campus.
-- Avoid hyper-filtered, unnatural stock photos or AI hallucinations.
-- Maintain consistent aspect ratios (e.g., `4/3` for course cards, `3/4` for teacher portraits, `16/9` for hero landscape).
-- Utilize Next.js `Image` with explicit width/height or `fill` with `sizes` for optimal WebP/AVIF delivery.
-- If placeholder images are temporarily used, they must be high-resolution Unsplash captures of genuine Rishikesh / Himalayan landscapes and documented in `src/data/`.
-
-## 5. Motion & Micro-interactions
-- Motion is subtle, slow, and serene (mimicking deep breath).
-- Use `framer-motion` for gentle fade-up on scroll (`y: 20 -> y: 0`, duration: 0.6s to 0.8s, ease: `[0.22, 1, 0.36, 1]`).
-- Respect `prefers-reduced-motion`.
-- Interactive hover effects: soft opacity shifts, gentle card elevate (`shadow-md` to `shadow-lg`), and organic border transitions.
+## 4. Authentic Photography Standards
+- **Zero External Stock Hotlinking**: Only use local assets stored in `public/images/` and registered in `src/data/image-assets.ts`.
+- **Authentic Imagery**: Real Rishikesh ashram photos, authentic Ganga views, verified faculty portraits, genuine training sessions.

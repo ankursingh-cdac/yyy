@@ -40,10 +40,15 @@ export const metadata: Metadata = {
     "Yoga Retreat Rishikesh",
     "Hatha Yoga India",
     "Ashtanga Vinyasa Rishikesh",
+    "Aerial Yoga Rishikesh",
   ],
   authors: [{ name: "Aadi Yoga School" }],
   creator: "Aadi Yoga School",
   publisher: "Aadi Yoga School",
+  icons: {
+    icon: "/images/brand/favicon-192.png",
+    apple: "/images/brand/favicon-192.png",
+  },
   formatDetection: {
     telephone: false,
   },
@@ -59,7 +64,7 @@ export const metadata: Metadata = {
     siteName: siteConfig.fullName,
     images: [
       {
-        url: siteConfig.ogImage,
+        url: "/images/hero/himalayas-ganga-hero.jpg",
         width: 1200,
         height: 800,
         alt: "Aadi Yoga School Rishikesh India - Yoga Teacher Training on the banks of River Ganga",
@@ -70,7 +75,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Best Yoga Teacher Training in Rishikesh, India | Aadi Yoga School",
     description: siteConfig.description,
-    images: [siteConfig.ogImage],
+    images: ["/images/hero/himalayas-ganga-hero.jpg"],
   },
   robots: {
     index: true,
@@ -100,7 +105,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen flex flex-col bg-warm-ivory text-dark-charcoal font-sans antialiased selection:bg-forest-green selection:text-warm-ivory">
+      <body className="min-h-screen flex flex-col bg-neutral-light text-charcoal font-sans antialiased selection:bg-brand-orange selection:text-white">
         <Providers>
           <Header />
           <MobileNavigation />

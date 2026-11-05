@@ -64,25 +64,25 @@ export default async function CourseDetailPage({ params }: CoursePageProps) {
   }
 
   return (
-    <article className="py-16 sm:py-24 bg-warm-ivory text-dark-charcoal">
+    <article className="py-16 sm:py-24 bg-neutral-light text-charcoal">
       <SectionContainer>
         {/* Breadcrumb & Eyebrow */}
         <div className="mb-6">
           <EyebrowLabel
             text={course.category === "ttc" ? "Yoga Teacher Training" : "Wellness Retreat"}
-            variant="terracotta"
+            variant="orange"
           />
-          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl text-forest-green leading-[1.14] tracking-tight max-w-4xl mt-2">
+          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-bold text-charcoal leading-[1.14] tracking-tight max-w-4xl mt-2">
             {course.title}
           </h1>
-          <p className="font-sans text-base sm:text-xl text-muted-text max-w-3xl mt-4 leading-relaxed font-light">
+          <p className="font-sans text-base sm:text-xl text-muted-slate max-w-3xl mt-4 leading-relaxed font-normal">
             {course.tagline}
           </p>
         </div>
 
         {/* Hero Image & Metadata Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 my-10">
-          <div className="lg:col-span-8 relative aspect-[16/10] rounded-2xl overflow-hidden shadow-lg border border-light-border bg-warm-sand/30">
+          <div className="lg:col-span-8 relative aspect-[16/10] rounded-xl overflow-hidden shadow-md border border-border-light bg-neutral-light">
             <Image
               src={course.image}
               alt={course.imageAlt}
@@ -94,56 +94,56 @@ export default async function CourseDetailPage({ params }: CoursePageProps) {
           </div>
 
           {/* Quick Info Sidebar */}
-          <div className="lg:col-span-4 p-6 sm:p-8 rounded-2xl bg-white border border-light-border shadow-sm flex flex-col justify-between">
+          <div className="lg:col-span-4 p-6 sm:p-8 rounded-xl bg-white border border-border-light shadow-2xs flex flex-col justify-between">
             <div className="space-y-5">
               <div>
-                <span className="text-xs uppercase font-sans tracking-widest text-muted-text">
-                  Course Fee
+                <span className="text-xs uppercase font-bold tracking-wider text-muted-slate font-sans">
+                  Course Investment
                 </span>
                 <div className="flex items-baseline gap-2 mt-1">
-                  <span className="font-serif text-3xl font-semibold text-forest-green">
+                  <span className="font-serif text-3xl font-bold text-charcoal">
                     {formatPrice(course.priceUsd, "USD")}
                   </span>
-                  <span className="text-sm text-muted-text font-sans">
+                  <span className="text-sm text-muted-slate font-sans">
                     / {formatPrice(course.priceInr, "INR")}
                   </span>
                 </div>
-                <div className="text-xs text-sage-green font-sans mt-0.5">
-                  Includes private/shared room & 3 meals
+                <div className="text-xs text-brand-orange font-bold font-sans mt-0.5">
+                  Includes private/twin room &amp; 3 sattvic meals
                 </div>
               </div>
 
-              <div className="border-t border-light-border pt-4 space-y-3 text-sm font-sans">
-                <div className="flex items-center gap-2.5 text-dark-charcoal/80">
-                  <Clock className="w-4 h-4 text-forest-green" />
+              <div className="border-t border-border-light pt-4 space-y-3 text-sm font-sans">
+                <div className="flex items-center gap-2.5 text-charcoal/85">
+                  <Clock className="w-4 h-4 text-brand-orange" />
                   <span>Duration: <strong>{course.duration}</strong></span>
                 </div>
 
                 {course.certification && (
-                  <div className="flex items-center gap-2.5 text-dark-charcoal/80">
-                    <Award className="w-4 h-4 text-forest-green" />
+                  <div className="flex items-center gap-2.5 text-charcoal/85">
+                    <Award className="w-4 h-4 text-brand-orange" />
                     <span>Certification: <strong>{course.certification}</strong></span>
                   </div>
                 )}
 
-                <div className="flex items-center gap-2.5 text-dark-charcoal/80">
-                  <Calendar className="w-4 h-4 text-forest-green" />
+                <div className="flex items-center gap-2.5 text-charcoal/85">
+                  <Calendar className="w-4 h-4 text-brand-orange" />
                   <span>Next Batch: <strong>{course.upcomingBatch}</strong></span>
                 </div>
 
-                <div className="flex items-center gap-2.5 text-dark-charcoal/80">
-                  <MapPin className="w-4 h-4 text-forest-green" />
+                <div className="flex items-center gap-2.5 text-charcoal/85">
+                  <MapPin className="w-4 h-4 text-brand-orange" />
                   <span>Location: <strong>Laxman Jhula, Rishikesh</strong></span>
                 </div>
               </div>
             </div>
 
-            <div className="pt-6 border-t border-light-border">
+            <div className="pt-6 border-t border-border-light">
               <a
                 href={siteConfig.contact.whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full font-sans font-semibold text-xs uppercase tracking-widest bg-forest-green text-warm-ivory hover:bg-[#122e26] transition-all shadow-sm"
+                className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md font-sans font-bold text-xs uppercase tracking-wider bg-brand-orange text-white hover:bg-brand-orange-hover transition-all shadow-sm active:scale-98"
               >
                 <Send className="w-4 h-4" />
                 <span>Reserve Spot on WhatsApp</span>
@@ -156,23 +156,23 @@ export default async function CourseDetailPage({ params }: CoursePageProps) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-12">
           <div className="lg:col-span-8 space-y-8">
             <div>
-              <h2 className="font-serif text-2xl sm:text-3xl text-forest-green mb-4">
+              <h2 className="font-serif text-2xl sm:text-3xl font-bold text-charcoal mb-4">
                 Program Overview
               </h2>
-              <p className="font-sans text-base sm:text-lg text-dark-charcoal/85 leading-relaxed">
+              <p className="font-sans text-base sm:text-lg text-charcoal/90 leading-relaxed font-normal">
                 {course.overview}
               </p>
             </div>
 
             {/* Curriculum Highlights */}
-            <div className="p-8 rounded-2xl bg-warm-sand/20 border border-light-border">
-              <h3 className="font-serif text-2xl text-forest-green mb-4">
-                What is Included & Highlights
+            <div className="p-8 rounded-xl bg-white border border-border-light shadow-2xs">
+              <h3 className="font-serif text-2xl font-bold text-charcoal mb-4">
+                What is Included &amp; Highlights
               </h3>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                 {course.highlights.map((highlight, idx) => (
-                  <li key={idx} className="flex items-start gap-2.5 text-sm font-sans text-dark-charcoal/85">
-                    <Check className="w-4 h-4 text-sage-green shrink-0 mt-0.5" />
+                  <li key={idx} className="flex items-start gap-2.5 text-sm font-sans text-charcoal/85">
+                    <Check className="w-4 h-4 text-brand-orange shrink-0 mt-0.5" />
                     <span>{highlight}</span>
                   </li>
                 ))}
@@ -181,19 +181,19 @@ export default async function CourseDetailPage({ params }: CoursePageProps) {
 
             {/* Curriculum Modules */}
             <div>
-              <h3 className="font-serif text-2xl text-forest-green mb-4">
+              <h3 className="font-serif text-2xl font-bold text-charcoal mb-4">
                 Curriculum Subjects
               </h3>
               <div className="space-y-3">
                 {course.curriculumSummary.map((subject, idx) => (
                   <div
                     key={idx}
-                    className="p-4 rounded-xl bg-white border border-light-border flex items-center justify-between"
+                    className="p-4 rounded-lg bg-white border border-border-light flex items-center justify-between"
                   >
-                    <span className="font-serif text-lg text-forest-green">
+                    <span className="font-serif text-lg font-bold text-charcoal">
                       {subject}
                     </span>
-                    <span className="text-xs uppercase tracking-wider text-muted-text font-sans">
+                    <span className="text-xs uppercase font-bold tracking-wider text-brand-orange font-sans">
                       Core Module {idx + 1}
                     </span>
                   </div>
@@ -202,21 +202,19 @@ export default async function CourseDetailPage({ params }: CoursePageProps) {
             </div>
           </div>
 
-          {/* Location & School Heritage Column */}
+          {/* School Heritage Column */}
           <div className="lg:col-span-4 space-y-6">
-            <div className="p-6 rounded-2xl bg-white border border-light-border">
-              <h4 className="font-serif text-xl text-forest-green mb-2">
+            <div className="p-6 rounded-xl bg-white border border-border-light shadow-2xs">
+              <h4 className="font-serif text-xl font-bold text-charcoal mb-2">
                 Why Study at Aadi Yoga?
               </h4>
-              <p className="text-xs sm:text-sm text-muted-text leading-relaxed font-sans mb-4">
-                Aadi Yoga is situated in the spiritual heart of Rishikesh. Our campus provides a genuine ashram atmosphere where academic discipline aligns with sacred inner silence.
+              <p className="text-xs sm:text-sm text-muted-slate leading-relaxed font-sans mb-4">
+                Aadi Yoga is situated in the spiritual heart of Rishikesh near Laxman Jhula. Our campus provides a genuine ashram atmosphere where academic discipline aligns with sacred inner silence.
               </p>
-              <div className="text-xs font-sans text-forest-green font-medium">
-                • Yoga Alliance USA Registered School
-                <br />
-                • Small class sizes for personalized guidance
-                <br />
-                • Authentic native Himalayan teachers
+              <div className="text-xs font-sans text-charcoal font-semibold space-y-1">
+                <div>• Yoga Alliance USA Registered School (RYS 200/300)</div>
+                <div>• Small batch sizes for individual hands-on attention</div>
+                <div>• Authentic native Himalayan masters &amp; scholars</div>
               </div>
             </div>
           </div>

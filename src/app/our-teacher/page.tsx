@@ -18,13 +18,13 @@ export const metadata: Metadata = {
 export default function OurTeacherPage() {
   return (
     <div>
-      <div className="bg-forest-green text-warm-ivory py-16 sm:py-24 text-center">
+      <div className="bg-deep-navy text-white py-16 sm:py-24 text-center border-b border-white/10">
         <SectionContainer>
-          <EyebrowLabel text="Himalayan Lineage" variant="ivory" className="justify-center" />
-          <h1 className="font-serif text-4xl sm:text-6xl text-warm-ivory mt-2">
+          <EyebrowLabel text="Himalayan Lineage" variant="orange" className="justify-center" />
+          <h1 className="font-serif text-4xl sm:text-6xl font-bold text-white mt-2">
             Our Revered Teachers
           </h1>
-          <p className="font-sans text-base sm:text-lg text-warm-sand/90 max-w-2xl mx-auto mt-4 font-light leading-relaxed">
+          <p className="font-sans text-base sm:text-lg text-white/85 max-w-2xl mx-auto mt-4 font-normal leading-relaxed">
             Guidance from authentic native yogis who live and breathe the ancient Vedic traditions.
           </p>
         </SectionContainer>

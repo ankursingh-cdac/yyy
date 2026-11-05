@@ -2,11 +2,12 @@
 
 import React from "react";
 import Image from "next/image";
-import { ArrowRight, MapPin } from "lucide-react";
+import { ArrowRight, MapPin, Star } from "lucide-react";
 import { PrimaryButton } from "@/components/common/buttons/PrimaryButton";
 import { SecondaryButton } from "@/components/common/buttons/SecondaryButton";
 import { useAppDispatch } from "@/store/hooks";
 import { openEnquiryModal } from "@/store/features/ui/uiSlice";
+import { heroAssets } from "@/data/image-assets";
 
 export function HeroSection() {
   const dispatch = useAppDispatch();
@@ -16,106 +17,100 @@ export function HeroSection() {
   };
 
   return (
-    <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden bg-forest-green">
-      {/* Background Cinematic Image with Subtle Parallax/Dimming */}
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-deep-navy">
+      {/* Background Cinematic Authentic Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=2400&q=85"
-          alt="Himalayan mountain peaks overlooking the sacred River Ganga in Rishikesh"
+          src={heroAssets.himalayasGanga}
+          alt="Sacred River Ganga and Himalayan foothills at Aadi Yoga School Rishikesh"
           fill
           priority
           sizes="100vw"
           className="object-cover object-center scale-105 transition-transform duration-1000 ease-out"
         />
-        {/* Editorial Multi-layered Gradient Overlay for Pristine Readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-forest-green/90 via-forest-green/70 to-forest-green/80" />
-        <div className="absolute inset-0 bg-gradient-to-t from-forest-green via-transparent to-black/30" />
+        {/* Multi-layered Deep Navy Gradient Overlay for Crisp Text Contrast */}
+        <div className="absolute inset-0 bg-gradient-to-r from-deep-navy/90 via-deep-navy/75 to-deep-navy/85" />
+        <div className="absolute inset-0 bg-gradient-to-t from-deep-navy via-transparent to-black/40" />
       </div>
 
       {/* Hero Content Container */}
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 text-center text-warm-ivory flex flex-col items-center">
-        {/* Location & Accreditation Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs sm:text-sm font-sans tracking-widest uppercase text-warm-sand mb-8 animate-in fade-in duration-700">
-          <MapPin className="w-3.5 h-3.5 text-warm-sand" />
-          <span>Rishikesh, Himalayas • Yoga Alliance USA (RYS)</span>
-        </div>
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 text-center text-white flex flex-col items-center">
+        {/* Location & Yoga Alliance Accreditation Pill */}
+        {/* <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs sm:text-sm font-sans font-semibold tracking-wider uppercase text-white mb-8 animate-in fade-in duration-700">
+          <MapPin className="w-4 h-4 text-brand-orange" />
+          <span>Rishikesh, Himalayas • Yoga Alliance USA Certified (RYS)</span>
+        </div> */}
 
-        {/* Grand Editorial Headline */}
-        <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-normal leading-[1.08] tracking-tight text-warm-ivory max-w-4xl mb-6">
-          Ancient Yogic Wisdom in the Lap of the Himalayas
+        {/* Grand Headline */}
+        <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-white max-w-4xl mb-6">
+          Transform Your Practice in the Yoga Capital of the World
         </h1>
 
-        {/* Serene Subtitle */}
-        <p className="font-sans text-base sm:text-xl md:text-2xl font-light text-warm-sand/90 max-w-2xl leading-relaxed mb-10">
-          Immerse yourself in authentic Hatha and Ashtanga Vinyasa Teacher
-          Training beside the sacred waters of River Ganga.
+        {/* Subtitle */}
+        <p className="font-sans text-base sm:text-xl md:text-2xl font-normal text-white/90 max-w-3xl leading-relaxed mb-10">
+          Authentic 100h, 200h, and 300h Yoga Teacher Training &amp; Himalayan Retreats on the sacred banks of River Ganga in Rishikesh, India.
         </p>
 
         {/* Action Button Row */}
         <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-5 w-full sm:w-auto">
           <PrimaryButton
             onClick={handleOpenEnquiry}
-            variant="sand"
+            variant="orange"
             size="lg"
-            className="w-full sm:w-auto text-forest-green"
+            className="w-full sm:w-auto text-white shadow-lg"
             icon={<ArrowRight className="w-4 h-4" />}
           >
-            Explore Programs & Dates
+            Explore Programs &amp; Fees
           </PrimaryButton>
 
           <SecondaryButton
-            href="#brand-intro"
-            variant="outline-ivory"
+            href="#courses"
+            variant="outline-white"
             size="lg"
             className="w-full sm:w-auto"
           >
-            Discover Aadi Yoga
+            View 2026 Batch Dates
           </SecondaryButton>
         </div>
 
-        {/* Bottom Trust Indicators */}
+        {/* Bottom Trust Indicators Strip */}
         <div className="mt-16 sm:mt-20 pt-8 border-t border-white/15 grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-10 text-center w-full max-w-3xl">
           <div>
-            <div className="font-serif text-3xl sm:text-4xl text-warm-sand">
-              2017
+            <div className="font-serif text-3xl sm:text-4xl font-bold text-brand-orange flex items-center justify-center gap-1">
+              <span>3,000</span>
+              <span className="text-xl">+</span>
             </div>
-            <div className="font-sans text-[11px] sm:text-xs uppercase tracking-wider text-warm-ivory/80 mt-1">
-              Established Lineage
-            </div>
-          </div>
-          <div>
-            <div className="font-serif text-3xl sm:text-4xl text-warm-sand">
-              1,200+
-            </div>
-            <div className="font-sans text-[11px] sm:text-xs uppercase tracking-wider text-warm-ivory/80 mt-1">
-              Global Graduates
+            <div className="font-sans text-xs font-semibold uppercase tracking-wider text-white/80 mt-1">
+              Global Alumni
             </div>
           </div>
           <div>
-            <div className="font-serif text-3xl sm:text-4xl text-warm-sand">
-              RYS 200/300
+            <div className="font-serif text-3xl sm:text-4xl font-bold text-white flex items-center justify-center gap-1">
+              <span>RYS</span>
+              <span className="text-brand-orange text-2xl font-bold">200/300</span>
             </div>
-            <div className="font-sans text-[11px] sm:text-xs uppercase tracking-wider text-warm-ivory/80 mt-1">
+            <div className="font-sans text-xs font-semibold uppercase tracking-wider text-white/80 mt-1">
               Yoga Alliance USA
             </div>
           </div>
           <div>
-            <div className="font-serif text-3xl sm:text-4xl text-warm-sand">
-              100%
+            <div className="font-serif text-3xl sm:text-4xl font-bold text-brand-orange flex items-center justify-center gap-1">
+              <Star className="w-6 h-6 fill-brand-orange text-brand-orange inline" />
+              <span>4.9</span>
             </div>
-            <div className="font-sans text-[11px] sm:text-xs uppercase tracking-wider text-warm-ivory/80 mt-1">
-              Authentic Sadhana
+            <div className="font-sans text-xs font-semibold uppercase tracking-wider text-white/80 mt-1">
+              Student Rating
+            </div>
+          </div>
+          <div>
+            <div className="font-serif text-3xl sm:text-4xl font-bold text-white">
+              10+ Yrs
+            </div>
+            <div className="font-sans text-xs font-semibold uppercase tracking-wider text-white/80 mt-1">
+              Authentic Tradition
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Subtle Scroll Hint */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 hidden sm:flex flex-col items-center gap-1.5 opacity-70">
-        <span className="text-[10px] uppercase font-sans tracking-[0.25em] text-warm-sand">
-          Scroll Down
-        </span>
-        <div className="w-0.5 h-8 bg-gradient-to-b from-warm-sand to-transparent animate-pulse" />
       </div>
     </section>
   );

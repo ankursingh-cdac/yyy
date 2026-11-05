@@ -2,11 +2,13 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, ChevronDown, Phone } from "lucide-react";
+import Image from "next/image";
+import { Menu, ChevronDown, Phone, LogIn } from "lucide-react";
 import { useAppDispatch } from "@/store/hooks";
-import { setMobileMenuOpen, openEnquiryModal } from "@/store/features/ui/uiSlice";
+import { setMobileMenuOpen } from "@/store/features/ui/uiSlice";
 import { mainNavItems } from "@/config/navigation";
 import { siteConfig } from "@/config/site";
+import { brandAssets } from "@/data/image-assets";
 import { cn } from "@/lib/utils";
 
 export function Header() {
@@ -16,11 +18,7 @@ export function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 20) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 15);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -31,62 +29,57 @@ export function Header() {
     dispatch(setMobileMenuOpen(true));
   };
 
-  const handleOpenEnquiry = () => {
-    dispatch(openEnquiryModal());
-  };
-
   return (
     <>
-      {/* Top Notification Bar (Editorial notice) */}
-      <div className="bg-forest-green text-warm-sand text-[11px] sm:text-xs py-2 px-4 border-b border-white/10 tracking-wider font-sans">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
+      {/* Top Editorial Notification Strip */}
+      <div className="bg-deep-navy text-white text-[11px] sm:text-xs py-2 px-4 border-b border-white/10 tracking-wide font-sans">
+        <div className="max-w-[1440px] mx-auto flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-sage-green animate-pulse" />
-            <span>
-              Yoga Alliance USA Certified School • Admissions Open for Upcoming Rishikesh Batches
+            <span className="w-2 h-2 rounded-full bg-brand-orange animate-pulse shrink-0" />
+            <span className="truncate">
+              Yoga Alliance USA RYS Certified School • Rishikesh, India
             </span>
           </div>
-          <div className="hidden md:flex items-center gap-4 text-warm-ivory">
+          <div className="hidden md:flex items-center gap-5 text-white/90 shrink-0">
             <a
               href={siteConfig.contact.phoneHref}
-              className="flex items-center gap-1.5 hover:text-warm-sand transition-colors"
+              className="flex items-center gap-1.5 hover:text-brand-orange transition-colors"
             >
-              <Phone className="w-3 h-3 text-warm-sand" />
+              <Phone className="w-3.5 h-3.5 text-brand-orange" />
               <span>{siteConfig.contact.phone}</span>
             </a>
-            <span className="opacity-30">|</span>
-            <span className="text-warm-sand font-medium">Laxman Jhula, Rishikesh</span>
+            <span className="text-white/30">|</span>
+            <span className="text-white/80">Laxman Jhula, Rishikesh</span>
           </div>
         </div>
       </div>
 
-      {/* Main Sticky Header */}
+      {/* Main Navigation Bar */}
       <header
         className={cn(
           "sticky top-0 z-40 w-full transition-all duration-300",
           isScrolled
-            ? "bg-warm-ivory/95 backdrop-blur-md shadow-sm border-b border-light-border py-3.5"
-            : "bg-warm-ivory/80 backdrop-blur-xs border-b border-light-border/60 py-5"
+            ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-border-light py-2.5"
+            : "bg-white/90 backdrop-blur-xs border-b border-border-light/70 py-3.5"
         )}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          {/* Brand Logo & Name */}
-          <Link href="/" className="group flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-forest-green flex items-center justify-center text-warm-ivory shadow-sm transition-transform duration-300 group-hover:scale-105">
-              <span className="font-serif text-xl italic font-normal">आ</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="font-serif text-2xl sm:text-3xl font-normal tracking-tight text-forest-green leading-none">
-                Aadi Yoga
-              </span>
-              <span className="font-sans text-[10px] uppercase tracking-[0.25em] text-sage-green font-medium mt-1">
-                Rishikesh • India
-              </span>
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between flex-nowrap">
+          {/* Brand Logo (Left) */}
+          <Link href="/" className="flex items-center shrink-0 mr-4 xl:mr-8 group">
+            <div className="relative h-11 w-36 sm:h-12 sm:w-44 transition-transform duration-200 group-hover:scale-[1.02]">
+              <Image
+                src={brandAssets.logoHorizontal}
+                alt={siteConfig.fullName}
+                fill
+                priority
+                className="object-contain object-left"
+                sizes="(max-width: 640px) 144px, 176px"
+              />
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-7">
+          {/* Desktop Navigation Row (Center - Never Wraps) */}
+          <nav className="hidden lg:flex items-center gap-1 xl:gap-2.5 shrink min-w-0 flex-nowrap">
             {mainNavItems.map((item) => {
               const hasChildren = item.children && item.children.length > 0;
               return (
@@ -98,28 +91,28 @@ export function Header() {
                 >
                   <Link
                     href={item.href}
-                    className="flex items-center gap-1 text-sm font-sans font-medium text-dark-charcoal/90 hover:text-forest-green transition-colors py-2 tracking-wide"
+                    className="flex items-center gap-1 text-[13px] xl:text-[14px] font-medium tracking-wide whitespace-nowrap px-2.5 py-1.5 rounded-md text-charcoal hover:text-brand-orange hover:bg-neutral-light transition-colors"
                   >
                     <span>{item.title}</span>
                     {hasChildren && (
-                      <ChevronDown className="w-3.5 h-3.5 text-muted-text transition-transform duration-200 group-hover:rotate-180" />
+                      <ChevronDown className="w-3.5 h-3.5 text-muted-slate transition-transform duration-200 group-hover:rotate-180" />
                     )}
                   </Link>
 
                   {/* Dropdown Menu */}
                   {hasChildren && activeDropdown === item.title && (
-                    <div className="absolute top-full left-0 w-72 p-2 bg-white rounded-xl border border-light-border shadow-xl animate-in fade-in slide-in-from-top-1 duration-200 z-50">
+                    <div className="absolute top-full left-0 w-72 p-2 bg-white rounded-xl border border-border-light shadow-xl animate-in fade-in slide-in-from-top-1 duration-200 z-50">
                       {item.children?.map((child) => (
                         <Link
                           key={child.title}
                           href={child.href}
-                          className="block p-3 rounded-lg hover:bg-warm-ivory transition-colors group/child"
+                          className="block p-3 rounded-lg hover:bg-neutral-light transition-colors group/child"
                         >
-                          <div className="text-sm font-serif font-medium text-forest-green group-hover/child:text-forest-green">
+                          <div className="text-sm font-semibold text-charcoal group-hover/child:text-brand-orange">
                             {child.title}
                           </div>
                           {child.description && (
-                            <div className="text-xs font-sans text-muted-text mt-0.5 line-clamp-2 leading-relaxed">
+                            <div className="text-xs text-muted-slate mt-0.5 line-clamp-2 leading-relaxed font-sans">
                               {child.description}
                             </div>
                           )}
@@ -132,22 +125,35 @@ export function Header() {
             })}
           </nav>
 
-          {/* Header Action CTAs */}
-          <div className="flex items-center gap-3">
-            <button
-              onClick={handleOpenEnquiry}
-              className="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-widest bg-forest-green text-warm-ivory hover:bg-[#122e26] transition-all cursor-pointer shadow-sm hover:shadow active:scale-95"
+          {/* User Account / Login CTA (Right - Requested by User) */}
+          <div className="flex items-center gap-3 shrink-0 ml-auto">
+            {/* Direct WhatsApp Quick Chat (Desktop wide) */}
+            <a
+              href={siteConfig.contact.whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden xl:inline-flex items-center gap-1.5 text-xs font-semibold text-charcoal hover:text-brand-orange transition-colors px-2.5 py-1.5 rounded-md hover:bg-neutral-light"
             >
-              Apply Now
-            </button>
+              <span className="w-2 h-2 rounded-full bg-emerald-500" />
+              <span>WhatsApp</span>
+            </a>
 
-            {/* Mobile Hamburger Trigger */}
+            {/* Login Button (Brand Orange, No Wrap) */}
+            <Link
+              href="/login"
+              className="inline-flex items-center gap-2 px-4 xl:px-5 py-2 rounded-md text-xs xl:text-sm font-semibold bg-brand-orange hover:bg-brand-orange-hover text-white shadow-xs transition-all duration-200 cursor-pointer whitespace-nowrap shrink-0 transform hover:-translate-y-0.5"
+            >
+              <LogIn className="w-3.5 h-3.5 xl:w-4 xl:h-4" />
+              <span>Login</span>
+            </Link>
+
+            {/* Mobile Hamburger Trigger (< 1024px) */}
             <button
               onClick={handleOpenMobile}
-              className="lg:hidden p-2 rounded-lg border border-light-border text-forest-green hover:bg-warm-sand/30 transition-colors cursor-pointer"
+              className="lg:hidden p-2 rounded-md border border-border-light text-charcoal hover:text-brand-orange hover:bg-neutral-light transition-colors cursor-pointer"
               aria-label="Open mobile navigation menu"
             >
-              <Menu className="w-6 h-6" />
+              <Menu className="w-5 h-5" />
             </button>
           </div>
         </div>

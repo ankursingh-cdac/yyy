@@ -1,14 +1,15 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   MapPin,
   Phone,
   Mail,
-  Award,
   ArrowUpRight,
 } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { footerNav } from "@/config/navigation";
+import { brandAssets } from "@/data/image-assets";
 
 function InstagramIcon({ className = "w-4 h-4" }: { className?: string }) {
   return (
@@ -57,54 +58,56 @@ function TwitterIcon({ className = "w-4 h-4" }: { className?: string }) {
 
 export function Footer() {
   return (
-    <footer className="bg-forest-green text-warm-ivory border-t border-white/10 pt-20 pb-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Main Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 pb-16 border-b border-white/10">
+    <footer className="bg-deep-navy text-white border-t border-white/10 pt-16 pb-12">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Main Footer Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-14 border-b border-white/10">
           {/* Brand Column (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-full bg-warm-sand flex items-center justify-center text-forest-green shadow-sm">
-                <span className="font-serif text-2xl font-normal">आ</span>
+            <Link href="/" className="inline-block">
+              <div className="relative h-16 w-44">
+                <Image
+                  src={brandAssets.footerLogo}
+                  alt={siteConfig.fullName}
+                  fill
+                  className="object-contain object-left"
+                  sizes="176px"
+                />
               </div>
-              <div>
-                <span className="font-serif text-3xl font-normal text-warm-ivory tracking-wide block">
-                  Aadi Yoga
-                </span>
-                <span className="font-sans text-xs uppercase tracking-[0.25em] text-warm-sand block">
-                  Rishikesh • India
-                </span>
-              </div>
-            </div>
+            </Link>
 
-            <p className="font-sans text-sm text-warm-sand/80 leading-relaxed max-w-md">
-              A premier traditional yoga school nestled in the Himalayan
-              foothills on the holy banks of River Ganga. Offering internationally
-              accredited 100-Hour, 200-Hour, and 300-Hour Yoga Teacher Training
-              Courses (YTTC) and meditative retreats registered with Yoga
-              Alliance, USA.
+            <p className="font-sans text-sm text-white/80 leading-relaxed max-w-md">
+              A premier traditional yoga school located near 13 Stories Temple, Laxman Jhula, Rishikesh, on the holy banks of River Ganga. Offering authentic Yoga Alliance USA certified 100h, 200h, 300h Yoga Teacher Training Courses (YTTC) and Himalayan retreats.
             </p>
 
-            {/* Accreditation Badge */}
-            <div className="p-4 rounded-xl bg-white/5 border border-white/10 max-w-md flex items-center gap-3.5">
-              <Award className="w-8 h-8 text-warm-sand shrink-0" />
+            {/* Yoga Alliance Badge */}
+            <div className="p-3.5 rounded-lg bg-white/5 border border-white/10 max-w-md flex items-center gap-4">
+              <div className="relative w-24 h-11 shrink-0 bg-white rounded p-1">
+                <Image
+                  src={brandAssets.yogaAlliance}
+                  alt="Yoga Alliance USA RYS"
+                  fill
+                  className="object-contain p-0.5"
+                  sizes="96px"
+                />
+              </div>
               <div>
-                <div className="font-serif text-base text-warm-ivory">
-                  Yoga Alliance USA (RYS)
+                <div className="font-serif text-sm font-bold text-white">
+                  Yoga Alliance USA Registered (RYS)
                 </div>
-                <div className="text-xs font-sans text-warm-sand/80">
-                  Internationally recognized certification valid worldwide
+                <div className="text-xs font-sans text-white/70">
+                  Internationally accredited RYS 200 &amp; RYS 300 school
                 </div>
               </div>
             </div>
 
-            {/* Social Icons */}
-            <div className="flex items-center gap-3 pt-2">
+            {/* Verified Social Media Links */}
+            <div className="flex items-center gap-2.5 pt-1">
               <a
                 href={siteConfig.social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/5 hover:bg-warm-sand hover:text-forest-green flex items-center justify-center transition-colors text-warm-ivory"
+                className="w-9 h-9 rounded-md bg-white/5 hover:bg-brand-orange hover:text-white flex items-center justify-center transition-colors text-white/90"
                 aria-label="Aadi Yoga Instagram"
               >
                 <InstagramIcon className="w-4 h-4" />
@@ -113,7 +116,7 @@ export function Footer() {
                 href={siteConfig.social.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/5 hover:bg-warm-sand hover:text-forest-green flex items-center justify-center transition-colors text-warm-ivory"
+                className="w-9 h-9 rounded-md bg-white/5 hover:bg-brand-orange hover:text-white flex items-center justify-center transition-colors text-white/90"
                 aria-label="Aadi Yoga Facebook"
               >
                 <FacebookIcon className="w-4 h-4" />
@@ -122,7 +125,7 @@ export function Footer() {
                 href={siteConfig.social.youtube}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/5 hover:bg-warm-sand hover:text-forest-green flex items-center justify-center transition-colors text-warm-ivory"
+                className="w-9 h-9 rounded-md bg-white/5 hover:bg-brand-orange hover:text-white flex items-center justify-center transition-colors text-white/90"
                 aria-label="Aadi Yoga YouTube Channel"
               >
                 <YoutubeIcon className="w-4 h-4" />
@@ -131,7 +134,7 @@ export function Footer() {
                 href={siteConfig.social.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/5 hover:bg-warm-sand hover:text-forest-green flex items-center justify-center transition-colors text-warm-ivory"
+                className="w-9 h-9 rounded-md bg-white/5 hover:bg-brand-orange hover:text-white flex items-center justify-center transition-colors text-white/90"
                 aria-label="Aadi Yoga LinkedIn"
               >
                 <LinkedinIcon className="w-4 h-4" />
@@ -140,7 +143,7 @@ export function Footer() {
                 href={siteConfig.social.twitter}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/5 hover:bg-warm-sand hover:text-forest-green flex items-center justify-center transition-colors text-warm-ivory"
+                className="w-9 h-9 rounded-md bg-white/5 hover:bg-brand-orange hover:text-white flex items-center justify-center transition-colors text-white/90"
                 aria-label="Aadi Yoga Twitter"
               >
                 <TwitterIcon className="w-4 h-4" />
@@ -150,15 +153,15 @@ export function Footer() {
 
           {/* Programs Column (2 cols) */}
           <div className="lg:col-span-2 space-y-4">
-            <h4 className="font-serif text-lg text-warm-sand tracking-wide uppercase">
-              Programs
+            <h4 className="font-serif text-base font-bold text-brand-orange tracking-wider uppercase">
+              Courses
             </h4>
-            <ul className="space-y-2.5 text-sm font-sans">
+            <ul className="space-y-2 text-sm font-sans">
               {footerNav.programs.map((item) => (
                 <li key={item.title}>
                   <Link
                     href={item.href}
-                    className="text-warm-ivory/80 hover:text-warm-sand transition-colors block py-0.5"
+                    className="text-white/80 hover:text-brand-orange transition-colors block py-0.5"
                   >
                     {item.title}
                   </Link>
@@ -169,15 +172,15 @@ export function Footer() {
 
           {/* Explore Column (2 cols) */}
           <div className="lg:col-span-2 space-y-4">
-            <h4 className="font-serif text-lg text-warm-sand tracking-wide uppercase">
+            <h4 className="font-serif text-base font-bold text-brand-orange tracking-wider uppercase">
               Explore
             </h4>
-            <ul className="space-y-2.5 text-sm font-sans">
+            <ul className="space-y-2 text-sm font-sans">
               {footerNav.explore.map((item) => (
                 <li key={item.title}>
                   <Link
                     href={item.href}
-                    className="text-warm-ivory/80 hover:text-warm-sand transition-colors block py-0.5"
+                    className="text-white/80 hover:text-brand-orange transition-colors block py-0.5"
                   >
                     {item.title}
                   </Link>
@@ -186,14 +189,14 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Reach Us / Ashram Location (3 cols) */}
+          {/* Ashram Contact & Map (3 cols) */}
           <div className="lg:col-span-3 space-y-4">
-            <h4 className="font-serif text-lg text-warm-sand tracking-wide uppercase">
-              Ashram Contact
+            <h4 className="font-serif text-base font-bold text-brand-orange tracking-wider uppercase">
+              Ashram Location
             </h4>
-            <div className="space-y-3.5 text-sm font-sans text-warm-ivory/85">
+            <div className="space-y-3 text-sm font-sans text-white/85">
               <div className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-warm-sand shrink-0 mt-1" />
+                <MapPin className="w-4 h-4 text-brand-orange shrink-0 mt-1" />
                 <address className="not-italic leading-relaxed text-xs sm:text-sm">
                   {siteConfig.location.address},
                   <br />
@@ -203,20 +206,20 @@ export function Footer() {
               </div>
 
               <div className="flex items-center gap-3">
-                <Phone className="w-4 h-4 text-warm-sand shrink-0" />
+                <Phone className="w-4 h-4 text-brand-orange shrink-0" />
                 <a
                   href={siteConfig.contact.phoneHref}
-                  className="hover:text-warm-sand transition-colors"
+                  className="hover:text-brand-orange transition-colors"
                 >
                   {siteConfig.contact.phone}
                 </a>
               </div>
 
               <div className="flex items-center gap-3">
-                <Mail className="w-4 h-4 text-warm-sand shrink-0" />
+                <Mail className="w-4 h-4 text-brand-orange shrink-0" />
                 <a
                   href={`mailto:${siteConfig.contact.email}`}
-                  className="hover:text-warm-sand transition-colors text-xs"
+                  className="hover:text-brand-orange transition-colors text-xs"
                 >
                   {siteConfig.contact.email}
                 </a>
@@ -227,9 +230,9 @@ export function Footer() {
                   href={siteConfig.location.googleMapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs uppercase tracking-wider text-warm-sand hover:text-warm-ivory underline underline-offset-4"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-brand-orange hover:text-white transition-colors"
                 >
-                  <span>View on Google Maps</span>
+                  <span>Open in Google Maps</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
                 </a>
               </div>
@@ -237,8 +240,8 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-sans text-warm-sand/70">
+        {/* Bottom Copyright & Legal Links */}
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-sans text-white/60">
           <div>
             © {new Date().getFullYear()} Aadi Yoga School. All Rights Reserved.
           </div>
@@ -247,7 +250,7 @@ export function Footer() {
               <Link
                 key={item.title}
                 href={item.href}
-                className="hover:text-warm-ivory transition-colors"
+                className="hover:text-brand-orange transition-colors"
               >
                 {item.title}
               </Link>

@@ -4,7 +4,7 @@ import { EyebrowLabel } from "./EyebrowLabel";
 
 interface SectionHeadingProps {
   eyebrow?: string;
-  eyebrowVariant?: "sage" | "terracotta" | "ivory";
+  eyebrowVariant?: "orange" | "terracotta" | "navy" | "white" | "sage" | "ivory";
   title: string;
   subtitle?: string;
   align?: "left" | "center" | "right";
@@ -14,7 +14,7 @@ interface SectionHeadingProps {
 
 export function SectionHeading({
   eyebrow,
-  eyebrowVariant = "sage",
+  eyebrowVariant = "orange",
   title,
   subtitle,
   align = "center",
@@ -44,8 +44,8 @@ export function SectionHeading({
       )}
       <h2
         className={cn(
-          "font-serif text-3xl sm:text-4xl md:text-5xl font-normal leading-[1.18] tracking-tight",
-          isDark ? "text-warm-ivory" : "text-forest-green"
+          "font-serif text-3xl sm:text-4xl md:text-5xl font-bold leading-[1.18] tracking-tight",
+          isDark ? "text-white" : "text-charcoal"
         )}
       >
         {title}
@@ -53,8 +53,8 @@ export function SectionHeading({
       {subtitle && (
         <p
           className={cn(
-            "mt-4 font-sans text-base sm:text-lg leading-relaxed max-w-2xl font-light",
-            isDark ? "text-warm-sand/90" : "text-muted-text"
+            "mt-4 font-sans text-base sm:text-lg leading-relaxed max-w-2xl font-normal",
+            isDark ? "text-white/80" : "text-muted-slate"
           )}
         >
           {subtitle}

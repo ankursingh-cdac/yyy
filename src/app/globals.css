@@ -2,22 +2,23 @@
 
 :root {
   /* ========================================================
-     AADI YOGA – PERMANENT BRAND COLOR PALETTE
-     Reference: .agents/rules/aadi-yoga-brand-design.md
+     AADI YOGA – AUTHENTIC BRAND COLOR SYSTEM
+     Verified from official logo and live aadiyogaschool.com
      ======================================================== */
-  --color-warm-ivory: #F7F4EC;
-  --color-forest-green: #183C32;
-  --color-sage-green: #71816A;
-  --color-warm-sand: #DCCDB6;
-  --color-muted-terracotta: #B8755B;
-  --color-dark-charcoal: #292C27;
+  --color-brand-orange: #F58220;
+  --color-brand-orange-hover: #D96E14;
+  --color-brand-orange-light: #FFF4EB;
+  --color-deep-navy: #14213D;
+  --color-brand-terracotta: #C3512F;
+  --color-neutral-light: #F5F6F8;
+  --color-charcoal: #242424;
+  --color-muted-slate: #666666;
+  --color-border-light: #E5E7EB;
   --color-white: #FFFFFF;
-  --color-light-border: #E7E2D7;
-  --color-muted-text: #77796F;
 
   /* Theme mappings */
-  --background: var(--color-warm-ivory);
-  --foreground: var(--color-dark-charcoal);
+  --background: var(--color-neutral-light);
+  --foreground: var(--color-charcoal);
 
   /* Radius tokens */
   --radius-sm: 0.25rem;
@@ -28,16 +29,18 @@
 }
 
 @theme {
-  --color-warm-ivory: var(--color-warm-ivory);
-  --color-forest-green: var(--color-forest-green);
-  --color-sage-green: var(--color-sage-green);
-  --color-warm-sand: var(--color-warm-sand);
-  --color-muted-terracotta: var(--color-muted-terracotta);
-  --color-dark-charcoal: var(--color-dark-charcoal);
-  --color-light-border: var(--color-light-border);
-  --color-muted-text: var(--color-muted-text);
+  --color-brand-orange: var(--color-brand-orange);
+  --color-brand-orange-hover: var(--color-brand-orange-hover);
+  --color-brand-orange-light: var(--color-brand-orange-light);
+  --color-deep-navy: var(--color-deep-navy);
+  --color-brand-terracotta: var(--color-brand-terracotta);
+  --color-neutral-light: var(--color-neutral-light);
+  --color-charcoal: var(--color-charcoal);
+  --color-muted-slate: var(--color-muted-slate);
+  --color-border-light: var(--color-border-light);
   --color-white: #FFFFFF;
 
+  /* Fonts */
   --font-serif: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
   --font-sans: var(--font-manrope), "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
@@ -51,15 +54,15 @@ html {
 }
 
 body {
-  background-color: var(--color-warm-ivory);
-  color: var(--color-dark-charcoal);
+  background-color: var(--color-neutral-light);
+  color: var(--color-charcoal);
   font-family: var(--font-sans);
   overflow-x: hidden;
 }
 
 ::selection {
-  background-color: var(--color-forest-green);
-  color: var(--color-warm-ivory);
+  background-color: var(--color-brand-orange);
+  color: #FFFFFF;
 }
 
 /* Editorial Heading Enhancements */
@@ -73,12 +76,12 @@ h1, h2, h3, h4, .font-serif {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--color-warm-ivory);
+  background: var(--color-neutral-light);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-warm-sand);
+  background: #CBD5E1;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-sage-green);
+  background: var(--color-brand-orange);
 }

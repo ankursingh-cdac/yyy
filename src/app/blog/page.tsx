@@ -42,44 +42,47 @@ const blogPosts = [
 export default function BlogPage() {
   return (
     <div>
-      <div className="bg-forest-green text-warm-ivory py-16 sm:py-24 text-center">
+      <div className="bg-deep-navy text-white py-16 sm:py-24 text-center border-b border-white/10">
         <SectionContainer>
-          <EyebrowLabel text="Yogic Wisdom" variant="ivory" className="justify-center" />
-          <h1 className="font-serif text-4xl sm:text-6xl text-warm-ivory mt-2">
+          <EyebrowLabel text="Yogic Wisdom" variant="orange" className="justify-center" />
+          <h1 className="font-serif text-4xl sm:text-6xl font-bold text-white mt-2">
             The Aadi Yoga Journal
           </h1>
-          <p className="font-sans text-base sm:text-lg text-warm-sand/90 max-w-2xl mx-auto mt-4 font-light leading-relaxed">
+          <p className="font-sans text-base sm:text-lg text-white/85 max-w-2xl mx-auto mt-4 font-normal leading-relaxed">
             Explorations into traditional philosophy, alignment, meditation, and healthy Ayurvedic living.
           </p>
         </SectionContainer>
       </div>
 
-      <section className="py-16 sm:py-24 bg-warm-ivory text-dark-charcoal">
+      <section className="py-16 sm:py-24 bg-neutral-light text-charcoal">
         <SectionContainer>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {blogPosts.map((post, idx) => (
               <div
                 key={idx}
-                className="p-8 rounded-2xl bg-white border border-light-border shadow-sm flex flex-col justify-between"
+                className="p-8 rounded-xl bg-white border border-border-light shadow-2xs hover:shadow-md transition-all flex flex-col justify-between"
               >
                 <div>
-                  <span className="text-xs uppercase tracking-wider text-sage-green font-semibold">
-                    {post.category}
-                  </span>
-                  <h3 className="font-serif text-2xl text-forest-green leading-snug mt-2 mb-3">
+                  <div className="flex items-center justify-between text-xs text-muted-slate mb-3">
+                    <span className="font-bold uppercase tracking-wider text-brand-orange">
+                      {post.category}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Calendar className="w-3.5 h-3.5 text-muted-slate" />
+                      <span>{post.date}</span>
+                    </span>
+                  </div>
+                  <h3 className="font-serif text-2xl font-bold text-charcoal mb-3 hover:text-brand-orange transition-colors">
                     {post.title}
                   </h3>
-                  <p className="font-sans text-sm text-muted-text leading-relaxed line-clamp-3 mb-6">
+                  <p className="font-sans text-sm text-muted-slate leading-relaxed mb-6">
                     {post.excerpt}
                   </p>
                 </div>
-                <div className="pt-4 border-t border-light-border flex items-center justify-between text-xs text-muted-text font-sans">
-                  <span className="flex items-center gap-1.5">
-                    <Calendar className="w-3.5 h-3.5" />
-                    <span>{post.date}</span>
-                  </span>
-                  <span className="text-forest-green font-semibold flex items-center gap-1 hover:underline">
-                    Read Article <ArrowRight className="w-3.5 h-3.5" />
+                <div className="pt-4 border-t border-border-light">
+                  <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-brand-orange hover:underline cursor-pointer">
+                    <span>Read Full Article</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
                   </span>
                 </div>
               </div>
