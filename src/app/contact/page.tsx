@@ -2,7 +2,6 @@ import React from "react";
 import type { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 import { SectionContainer } from "@/components/common/containers/SectionContainer";
-import { EyebrowLabel } from "@/components/common/typography/EyebrowLabel";
 import { MapPin, Phone, Mail, MessageCircle, ArrowUpRight } from "lucide-react";
 import { CtaSection } from "@/components/sections/contact/CtaSection";
 

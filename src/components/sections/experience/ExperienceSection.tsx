@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import { EyebrowLabel } from "@/components/common/typography/EyebrowLabel";
 import { Waves, Utensils, Home, Sparkles } from "lucide-react";
 import { heroAssets, shalaAssets, accommodationAssets, foodAssets } from "@/data/image-assets";
 

@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import { Mountain, Waves, Compass, ArrowRight } from "lucide-react";
-import { EyebrowLabel } from "@/components/common/typography/EyebrowLabel";
 
 export function WhyRishikeshSection() {
   return (

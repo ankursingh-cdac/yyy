@@ -1,12 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
 import uiReducer from "./features/ui/uiSlice";
 import preferencesReducer from "./features/preferences/preferencesSlice";
+import authReducer from "./features/auth/authSlice";
 
 export const makeStore = () => {
   return configureStore({
     reducer: {
       ui: uiReducer,
       preferences: preferencesReducer,
+      auth: authReducer,
     },
     middleware: (getDefaultMiddleware) =>
       getDefaultMiddleware({

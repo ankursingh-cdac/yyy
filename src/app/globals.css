@@ -47,8 +47,8 @@
   --color-border-light: var(--color-border-light);
   --color-white: #FFFFFF;
 
-  /* Fonts */
-  --font-serif: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  /* Fonts - Unified Font Family Everywhere for Continuity */
+  --font-serif: var(--font-manrope), "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-sans: var(--font-manrope), "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
@@ -63,7 +63,7 @@ html {
 body {
   background-color: var(--color-neutral-light);
   color: var(--color-charcoal);
-  font-family: var(--font-sans);
+  font-family: var(--font-manrope), "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   overflow-x: hidden;
 }
 
@@ -72,9 +72,9 @@ body {
   color: #FFFFFF;
 }
 
-/* Editorial Heading Enhancements */
-h1, h2, h3, h4, .font-serif {
-  font-family: var(--font-serif);
+/* Clean Unified Heading Typography */
+h1, h2, h3, h4, h5, h6, .font-serif, .font-sans {
+  font-family: var(--font-manrope), "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   letter-spacing: -0.015em;
 }
 

@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { MessageCircle, Phone, Sparkles, Send } from "lucide-react";
+import { MessageCircle, Phone, Send } from "lucide-react";
 import { useAppDispatch } from "@/store/hooks";
 import { openEnquiryModal } from "@/store/features/ui/uiSlice";
 import { siteConfig } from "@/config/site";

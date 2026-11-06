@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { SectionContainer } from "@/components/common/containers/SectionContainer";
-import { EyebrowLabel } from "@/components/common/typography/EyebrowLabel";
 import { CtaSection } from "@/components/sections/contact/CtaSection";
 import { Check, Calendar } from "lucide-react";
 

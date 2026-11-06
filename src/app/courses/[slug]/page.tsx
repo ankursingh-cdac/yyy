@@ -5,7 +5,6 @@ import type { Metadata } from "next";
 import { coursesData } from "@/data/courses";
 import { siteConfig } from "@/config/site";
 import { SectionContainer } from "@/components/common/containers/SectionContainer";
-import { EyebrowLabel } from "@/components/common/typography/EyebrowLabel";
 import { formatPrice } from "@/lib/utils";
 import { Award, Calendar, Check, Clock, MapPin, Send } from "lucide-react";
 

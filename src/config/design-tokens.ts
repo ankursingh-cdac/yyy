@@ -31,15 +31,15 @@ export const BRAND_COLORS = {
 
 export const TYPOGRAPHY = {
   fonts: {
-    heading: "var(--font-cormorant)",
+    heading: "var(--font-manrope)",
     body: "var(--font-manrope)",
   },
   scales: {
-    display: "font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1]",
-    h1: "font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.15]",
-    h2: "font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.2]",
-    h3: "font-serif text-xl sm:text-2xl md:text-3xl font-semibold leading-[1.3]",
-    h4: "font-serif text-lg sm:text-xl md:text-2xl font-semibold leading-[1.3]",
+    display: "font-sans text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1]",
+    h1: "font-sans text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.15]",
+    h2: "font-sans text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.2]",
+    h3: "font-sans text-xl sm:text-2xl md:text-3xl font-semibold leading-[1.3]",
+    h4: "font-sans text-lg sm:text-xl md:text-2xl font-semibold leading-[1.3]",
     eyebrow: "font-sans text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-brand-orange",
     bodyLarge: "font-sans text-lg sm:text-xl font-normal leading-relaxed text-charcoal/90",
     body: "font-sans text-base font-normal leading-relaxed text-charcoal/85",

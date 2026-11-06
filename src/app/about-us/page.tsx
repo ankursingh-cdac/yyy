@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { SectionContainer } from "@/components/common/containers/SectionContainer";
-import { EyebrowLabel } from "@/components/common/typography/EyebrowLabel";
 import { ExperienceSection } from "@/components/sections/experience/ExperienceSection";
 import { CtaSection } from "@/components/sections/contact/CtaSection";
 import { heroAssets } from "@/data/image-assets";

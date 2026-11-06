@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import { Calendar, ArrowRight } from "lucide-react";
-import { EyebrowLabel } from "@/components/common/typography/EyebrowLabel";
 
 export function LatestBlogsSection() {
   const blogs = [
