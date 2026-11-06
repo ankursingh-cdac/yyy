@@ -59,21 +59,28 @@ export function Header() {
         className={cn(
           "sticky top-0 z-40 w-full transition-all duration-300",
           isScrolled
-            ? "bg-white/95 backdrop-blur-md shadow-xs border-b border-border-light py-2.5"
-            : "bg-white/90 backdrop-blur-xs border-b border-border-light/70 py-3.5"
+            ? "bg-white/95 backdrop-blur-md shadow-xs border-b border-border-light py-2"
+            : "bg-white/90 backdrop-blur-xs border-b border-border-light/70 py-2.5 sm:py-3"
         )}
       >
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between flex-nowrap">
           {/* Brand Logo (Left) */}
           <Link href="/" className="flex items-center shrink-0 mr-4 xl:mr-8 group">
-            <div className="relative h-11 w-36 sm:h-12 sm:w-44 transition-transform duration-200 group-hover:scale-[1.02]">
+            <div
+              className={cn(
+                "relative transition-all duration-300 group-hover:scale-105 drop-shadow-xs",
+                isScrolled
+                  ? "h-12 w-12 sm:h-14 sm:w-14 lg:h-16 lg:w-16"
+                  : "h-14 w-14 sm:h-16 sm:w-16 lg:h-[76px] lg:w-[76px] xl:h-[82px] xl:w-[82px]"
+              )}
+            >
               <Image
                 src={brandAssets.logoHorizontal}
                 alt={siteConfig.fullName}
                 fill
                 priority
-                className="object-contain object-left"
-                sizes="(max-width: 640px) 144px, 176px"
+                className="object-contain"
+                sizes="(max-width: 640px) 56px, (max-width: 1024px) 64px, 82px"
               />
             </div>
           </Link>

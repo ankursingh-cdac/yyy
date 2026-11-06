@@ -65,13 +65,13 @@ export function Footer() {
           {/* Brand Column (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
             <Link href="/" className="inline-block">
-              <div className="relative h-16 w-44">
+              <div className="relative h-20 w-24">
                 <Image
                   src={brandAssets.footerLogo}
                   alt={siteConfig.fullName}
                   fill
                   className="object-contain object-left"
-                  sizes="176px"
+                  sizes="96px"
                 />
               </div>
             </Link>

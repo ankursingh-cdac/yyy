@@ -22,15 +22,15 @@ export default function LoginPage() {
       <div className="w-full max-w-md bg-white border border-border-light rounded-xl shadow-lg p-8 sm:p-10">
         {/* Logo & School Header */}
         <div className="text-center mb-8">
-          <Link href="/" className="inline-block mb-4">
-            <div className="relative h-12 w-44 mx-auto">
+          <Link href="/" className="inline-block mb-4 group">
+            <div className="relative w-24 h-24 sm:w-28 sm:h-28 mx-auto transition-transform duration-300 group-hover:scale-105 drop-shadow-md">
               <Image
                 src={brandAssets.logoHorizontal}
                 alt={siteConfig.fullName}
                 fill
                 priority
                 className="object-contain"
-                sizes="176px"
+                sizes="(max-width: 640px) 96px, 112px"
               />
             </div>
           </Link>
