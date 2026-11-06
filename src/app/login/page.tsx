@@ -34,10 +34,6 @@ export default function LoginPage() {
               />
             </div>
           </Link>
-          <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-brand-orange-light text-brand-orange text-xs font-bold uppercase tracking-wider mb-2">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>Student &amp; Alumni Portal</span>
-          </div>
           <h1 className="font-serif text-3xl font-bold text-charcoal">
             Welcome to Aadi Yoga
           </h1>

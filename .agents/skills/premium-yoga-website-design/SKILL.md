@@ -34,7 +34,6 @@ export function ExampleSection({ ...props }: ExampleSectionProps) {
     <section className="py-20 md:py-28 bg-warm-ivory text-dark-charcoal">
       <SectionContainer>
         <div className="max-w-2xl mx-auto text-center mb-16">
-          <EyebrowLabel text="Rishikesh Tradition" />
           <SectionHeading
             title="Deepen Your Yogic Practice"
             subtitle="Under the guidance of authentic Himalayan masters on the banks of Ganga."

@@ -8,8 +8,6 @@ export function TestimonialsSection() {
     <section className="py-20 sm:py-28 bg-white border-b border-border-light">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          eyebrow="Student Transformations"
-          eyebrowVariant="orange"
           title="Voices of Our International Graduates"
           subtitle="Read reflections from practitioners across 80+ countries who lived, trained, and transformed at Aadi Yoga School in Rishikesh."
         />

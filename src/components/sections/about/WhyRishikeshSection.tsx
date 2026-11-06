@@ -9,7 +9,6 @@ export function WhyRishikeshSection() {
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <EyebrowLabel text="Himalayan Lineage" variant="orange" className="justify-center" />
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-charcoal leading-[1.18] tracking-tight">
             Best Yoga Teacher Training India
           </h2>

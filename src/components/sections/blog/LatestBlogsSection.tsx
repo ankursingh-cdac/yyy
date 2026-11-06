@@ -43,7 +43,6 @@ export function LatestBlogsSection() {
     <section className="py-20 sm:py-28 bg-white text-charcoal border-b border-border-light">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <EyebrowLabel text="Yogic Wisdom & Articles" variant="orange" className="justify-center" />
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-charcoal leading-[1.18] tracking-tight">
             Latest Blogs
           </h2>

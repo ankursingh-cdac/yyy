@@ -9,8 +9,6 @@ export function TeachersSection() {
     <section id="teachers" className="py-20 sm:py-28 bg-white text-charcoal border-b border-border-light">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          eyebrow="Authentic Masters"
-          eyebrowVariant="orange"
           title="Guided by Himalayan Masters &amp; Yogic Scholars"
           subtitle="Learn directly from seasoned yogis, scholars, and anatomy specialists dedicated to transmitting traditional knowledge with care and precision."
         />

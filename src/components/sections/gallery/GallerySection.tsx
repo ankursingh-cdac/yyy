@@ -18,8 +18,6 @@ export function GallerySection() {
     <section id="gallery" className="py-20 sm:py-28 bg-neutral-light text-charcoal border-b border-border-light">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          eyebrow="Sanctuary in Focus"
-          eyebrowVariant="orange"
           title="Moments of Sadhana &amp; Ashram Life"
           subtitle="A visual glimpse into authentic classes, our mountain-facing yoga shala, clean accommodation, and the serene surroundings of Rishikesh."
         />

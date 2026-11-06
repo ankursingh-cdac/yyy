@@ -68,10 +68,6 @@ export default async function CourseDetailPage({ params }: CoursePageProps) {
       <SectionContainer>
         {/* Breadcrumb & Eyebrow */}
         <div className="mb-6">
-          <EyebrowLabel
-            text={course.category === "ttc" ? "Yoga Teacher Training" : "Wellness Retreat"}
-            variant="orange"
-          />
           <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-bold text-charcoal leading-[1.14] tracking-tight max-w-4xl mt-2">
             {course.title}
           </h1>

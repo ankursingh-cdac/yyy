@@ -20,10 +20,6 @@ export function CtaSection() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] border border-brand-terracotta/20 rounded-full pointer-events-none" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-orange/20 border border-brand-orange/40 text-xs sm:text-sm font-sans font-bold tracking-wider uppercase text-brand-orange mb-6 shadow-xs">
-          <Sparkles className="w-4 h-4" />
-          <span>Your Sadhana Awaits in Rishikesh</span>
-        </div>
 
         <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-[1.12] tracking-tight mb-6 max-w-3xl">
           Begin Your Yogic Journey Beside the Holy Ganga.

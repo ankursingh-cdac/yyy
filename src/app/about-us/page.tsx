@@ -26,7 +26,6 @@ export default function AboutUsPage() {
       <div className="bg-[#24110A] text-white py-16 sm:py-24 text-center border-b border-[#3D1D13] relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-brand-orange/20 via-transparent to-transparent pointer-events-none" />
         <SectionContainer className="relative z-10">
-          <EyebrowLabel text="Yoga Alliance Certification" variant="orange" className="justify-center" />
           <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-bold text-white mt-2 leading-tight">
             Yoga Teacher Training Center in Rishikesh, India
           </h1>

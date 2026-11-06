@@ -26,8 +26,6 @@ export function CoursesSection() {
     <section id="courses" className="py-20 sm:py-28 bg-neutral-light border-y border-border-light">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          eyebrow="Courses &amp; Retreats in Rishikesh"
-          eyebrowVariant="orange"
           title="What We Offer"
           subtitle="Residential 100-Hour, 200-Hour, 300-Hour Hatha &amp; Ashtanga Yoga Teacher Training Courses and Rejuvenating Retreats in Rishikesh, India Registered with Yoga Alliance, USA."
         />
