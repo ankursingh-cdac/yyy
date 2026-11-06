@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { ArrowRight, MapPin, Star } from "lucide-react";
+import { ArrowRight, Star } from "lucide-react";
 import { PrimaryButton } from "@/components/common/buttons/PrimaryButton";
 import { SecondaryButton } from "@/components/common/buttons/SecondaryButton";
 import { useAppDispatch } from "@/store/hooks";

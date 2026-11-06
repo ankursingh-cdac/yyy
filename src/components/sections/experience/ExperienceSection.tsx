@@ -44,12 +44,12 @@ export function ExperienceSection() {
 
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <EyebrowLabel text="Life at Aadi Yoga" variant="orange" className="justify-center" />
+          <EyebrowLabel text="Ganga Riverside Sanctuary" variant="orange" className="justify-center" />
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-[1.18] tracking-tight">
-            The Authentic Rishikesh Ashram Experience
+            Best Yoga Teacher Training School in Rishikesh
           </h2>
           <p className="mt-4 font-sans text-base sm:text-lg text-[#F3EBE6]/85 font-normal leading-relaxed">
-            Teacher training in Rishikesh is far more than a classroom course. It is an authentic immersion into a disciplined yogic lifestyle where the holy environment itself deepens your practice.
+            Yoga has been considered as a gift to the world from India. India has been a land of sages, Rishis, Munis, and Sadhaks since time immemorial. Aadi Yoga School maintains a beautiful Yoga Ashram on the bank of the Ganga river in the peaceful environs of Rishikesh to facilitate yoga teacher training and retreats in India.
           </p>
         </div>
 
@@ -89,14 +89,14 @@ export function ExperienceSection() {
         </div>
 
         {/* Daily Ashram Schedule Preview */}
-        <div className="mt-16 p-8 rounded-xl bg-[#1A0C07] border border-[#3D1D13] max-w-4xl mx-auto shadow-lg">
+        <div className="mt-16 p-8 rounded-xl bg-[#1A0C07] border border-[#3D1D13] max-w-5xl mx-auto shadow-lg">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-[#3D1D13] pb-5 mb-6 text-center sm:text-left">
             <div>
               <span className="text-xs font-sans uppercase tracking-widest text-brand-orange font-bold">
-                Daily Ashram Sadhana
+                Daily Ashram Schedule
               </span>
               <h4 className="font-serif text-2xl font-bold text-white mt-0.5">
-                A Day in the Life of a Yoga Student
+                The Daily Schedule of the Course
               </h4>
             </div>
             <span className="text-xs font-sans text-[#F3EBE6]/70">
@@ -104,22 +104,54 @@ export function ExperienceSection() {
             </span>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-xs font-sans">
-            <div className="p-3.5 rounded-lg bg-[#24110A] border border-[#3D1D13]">
-              <span className="text-brand-orange font-bold block mb-1">05:30 AM – 07:00 AM</span>
-              <span className="text-[#F3EBE6] font-medium block">Morning Cleansing &amp; Pranayama</span>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3.5 text-xs font-sans">
+            <div className="p-3 rounded-lg bg-[#24110A] border border-[#3D1D13]">
+              <span className="text-brand-orange font-bold block mb-0.5">06:00 AM – 06:30 AM</span>
+              <span className="text-[#F3EBE6] font-medium block">Wake Up &amp; Herbal Tea</span>
             </div>
-            <div className="p-3.5 rounded-lg bg-[#24110A] border border-[#3D1D13]">
-              <span className="text-brand-orange font-bold block mb-1">07:00 AM – 08:30 AM</span>
-              <span className="text-[#F3EBE6] font-medium block">Hatha Yoga / Ashtanga Flow</span>
+            <div className="p-3 rounded-lg bg-[#24110A] border border-[#3D1D13]">
+              <span className="text-brand-orange font-bold block mb-0.5">06:45 AM – 07:00 AM</span>
+              <span className="text-[#F3EBE6] font-medium block">Yogic Cleansing (Shatkarma)</span>
             </div>
-            <div className="p-3.5 rounded-lg bg-[#24110A] border border-[#3D1D13]">
-              <span className="text-brand-orange font-bold block mb-1">09:00 AM – 10:00 AM</span>
-              <span className="text-[#F3EBE6] font-medium block">Sattvic Ayurvedic Breakfast</span>
+            <div className="p-3 rounded-lg bg-[#24110A] border border-[#3D1D13]">
+              <span className="text-brand-orange font-bold block mb-0.5">07:00 AM – 07:30 AM</span>
+              <span className="text-[#F3EBE6] font-medium block">Mantra Chanting &amp; Pranayama</span>
             </div>
-            <div className="p-3.5 rounded-lg bg-[#24110A] border border-[#3D1D13]">
-              <span className="text-brand-orange font-bold block mb-1">11:00 AM – 01:00 PM</span>
-              <span className="text-[#F3EBE6] font-medium block">Anatomy &amp; Philosophy Lecture</span>
+            <div className="p-3 rounded-lg bg-[#24110A] border border-[#3D1D13]">
+              <span className="text-brand-orange font-bold block mb-0.5">07:30 AM – 09:00 AM</span>
+              <span className="text-[#F3EBE6] font-medium block">Hatha Yoga Asana Practice</span>
+            </div>
+            <div className="p-3 rounded-lg bg-[#24110A] border border-[#3D1D13]">
+              <span className="text-brand-orange font-bold block mb-0.5">09:00 AM – 10:00 AM</span>
+              <span className="text-[#F3EBE6] font-medium block">Nutritious Sattvic Breakfast</span>
+            </div>
+            <div className="p-3 rounded-lg bg-[#24110A] border border-[#3D1D13]">
+              <span className="text-brand-orange font-bold block mb-0.5">10:00 AM – 11:15 AM</span>
+              <span className="text-[#F3EBE6] font-medium block">Yoga Anatomy &amp; Physiology</span>
+            </div>
+            <div className="p-3 rounded-lg bg-[#24110A] border border-[#3D1D13]">
+              <span className="text-brand-orange font-bold block mb-0.5">11:30 AM – 01:00 PM</span>
+              <span className="text-[#F3EBE6] font-medium block">Yoga Philosophy &amp; Sutras</span>
+            </div>
+            <div className="p-3 rounded-lg bg-[#24110A] border border-[#3D1D13]">
+              <span className="text-brand-orange font-bold block mb-0.5">01:00 PM – 03:00 PM</span>
+              <span className="text-[#F3EBE6] font-medium block">Ayurvedic Lunch &amp; Self-Study</span>
+            </div>
+            <div className="p-3 rounded-lg bg-[#24110A] border border-[#3D1D13]">
+              <span className="text-brand-orange font-bold block mb-0.5">03:00 PM – 04:00 PM</span>
+              <span className="text-[#F3EBE6] font-medium block">Methodology &amp; Alignment</span>
+            </div>
+            <div className="p-3 rounded-lg bg-[#24110A] border border-[#3D1D13]">
+              <span className="text-brand-orange font-bold block mb-0.5">04:30 PM – 06:30 PM</span>
+              <span className="text-[#F3EBE6] font-medium block">Ashtanga Vinyasa Series</span>
+            </div>
+            <div className="p-3 rounded-lg bg-[#24110A] border border-[#3D1D13]">
+              <span className="text-brand-orange font-bold block mb-0.5">07:00 PM – 08:00 PM</span>
+              <span className="text-[#F3EBE6] font-medium block">Fresh Vegetarian Dinner</span>
+            </div>
+            <div className="p-3 rounded-lg bg-[#24110A] border border-[#3D1D13]">
+              <span className="text-brand-orange font-bold block mb-0.5">08:30 PM – 09:30 PM</span>
+              <span className="text-[#F3EBE6] font-medium block">Yoga Nidra &amp; Meditation</span>
             </div>
           </div>
         </div>

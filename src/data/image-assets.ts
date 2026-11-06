@@ -5,7 +5,7 @@
 
 export const brandAssets = {
   emblemRound: '/images/brand/aadi-yoga-emblem-round.png',
-  logoHorizontal: '/images/brand/aadi-yoga-logo.png',
+  logoHorizontal: '/images/brand/aadi_yoga_logo.webp',
   footerLogo: '/images/brand/aadi-yoga-footer-logo.png',
   yogaAlliance: '/images/brand/yoga-alliance-usa.jpg',
   favicon192: '/images/brand/favicon-192.png',
@@ -23,6 +23,7 @@ export const courseAssets = {
   yttc300: '/images/courses/300-hour-yttc.jpg',
   retreat: '/images/courses/yoga-retreat.jpg',
   aerial: '/images/courses/aerial-yoga-ttc.jpg',
+  graduationBatch: '/images/courses/aadi-yoga-graduation-batch.jpg',
 } as const;
 
 export const teacherAssets = {

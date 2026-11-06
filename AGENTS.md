@@ -24,16 +24,16 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 - **Category**: Yoga School, Yoga Alliance USA RYS, Yoga Teacher Training (100h, 200h, 300h YTTC), Yoga Retreats & Himalayan Wellness Education.
 - **Approved Aesthetic Direction**: **AUTHENTIC ASHRAM BRAND IDENTITY + TAILWIND UI EDITORIAL POLISH**.
   - Evokes: Real ashram life in Rishikesh, sacred River Ganga, certified Himalayan yoga lineage, pure energy of yoga sadhana.
-  - Core Brand Identity: **Brand Saffron Orange (`#F58220`)** from official emblem, balanced by **Faded Red / Terracotta (`#C3512F`, `#A83C24`)** and **Deep Warm Earth / Ashram Mahogany (`#24110A`)** for spiritual grounding, with **Warm Organic Linen (`#FAF9F6`)** for page background.
+  - Core Brand Identity: **Brand Saffron Orange (`#FF8A27`)** from official emblem, balanced by **Faded Red / Terracotta (`#C3512F`, `#A83C24`)** and **Deep Warm Earth / Ashram Mahogany (`#24110A`)** for spiritual grounding, with **Warm Organic Linen (`#FAF9F6`)** for page background.
   - STRICT PROHIBITION: NEVER use cold blueish colors (`#14213D` or generic blues). NEVER look like a generic green AI template or bootstrap gym site.
 
 ---
 
 ## 2. Permanent Brand Tokens
 Never use hardcoded arbitrary colors. Always use CSS variables and Tailwind classes:
-- **Brand Saffron Orange (`#F58220`)**: Primary brand color, logo emblem, key buttons, highlights (`bg-brand-orange`, `text-brand-orange`)
-- **Brand Orange Hover (`#D96E14`)**: WCAG-compliant hover state (`hover:bg-brand-orange-hover`)
-- **Brand Orange Light (`#FFF4EB`)**: Subtle badge backgrounds and accent cards (`bg-brand-orange-light`)
+- **Brand Saffron Orange (`#FF8A27`)**: Primary brand color, logo emblem, key buttons, highlights (`bg-brand-orange`, `text-brand-orange`)
+- **Brand Orange Hover (`#E67312`)**: WCAG-compliant hover state (`hover:bg-brand-orange-hover`)
+- **Brand Orange Light (`#FFF6ED`)**: Subtle badge backgrounds and accent cards (`bg-brand-orange-light`)
 - **Deep Warm Earth / Ashram Mahogany (`#24110A`)**: Contrast overlays, hero vignette, editorial dark sections, global footer (`bg-deep-earth`, `text-white`)
 - **Brand Terracotta (`#C3512F`)**: Fee tables, schedule headers, secondary highlights (`bg-brand-terracotta`)
 - **Brand Faded Red / Gerua (`#A83C24`)**: Warm spiritual red accent, decorative glows (`bg-brand-faded-red`)

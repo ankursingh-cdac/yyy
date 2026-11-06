@@ -1,37 +1,49 @@
 import { HeroSection } from "@/components/sections/hero/HeroSection";
+import { FeaturePillars } from "@/components/sections/introduction/FeaturePillars";
 import { BrandIntroSection } from "@/components/sections/introduction/BrandIntroSection";
+import { WhyRishikeshSection } from "@/components/sections/about/WhyRishikeshSection";
 import { CoursesSection } from "@/components/sections/courses/CoursesSection";
 import { ExperienceSection } from "@/components/sections/experience/ExperienceSection";
 import { TeachersSection } from "@/components/sections/teachers/TeachersSection";
 import { TestimonialsSection } from "@/components/sections/testimonials/TestimonialsSection";
+import { LatestBlogsSection } from "@/components/sections/blog/LatestBlogsSection";
 import { GallerySection } from "@/components/sections/gallery/GallerySection";
 import { CtaSection } from "@/components/sections/contact/CtaSection";
 
 export default function HomePage() {
   return (
     <>
-      {/* SECTION 2: CINEMATIC HERO */}
+      {/* 1. CINEMATIC HERO */}
       <HeroSection />
 
-      {/* SECTION 3: BRAND INTRODUCTION */}
+      {/* 2. 3 QUICK FEATURE PILLARS */}
+      <FeaturePillars />
+
+      {/* 3. WELCOME AT AADI YOGA TEACHER TRAINING INDIA */}
       <BrandIntroSection />
 
-      {/* SECTION 4: YOGA PROGRAMS SHOWCASE */}
+      {/* 4. BEST YOGA TEACHER TRAINING INDIA NARRATIVE */}
+      <WhyRishikeshSection />
+
+      {/* 5. WHAT WE OFFER (COURSES & RETREATS) */}
       <CoursesSection />
 
-      {/* SECTION 5: THE RISHIKESH EXPERIENCE */}
+      {/* 6. BEST YOGA TEACHER TRAINING SCHOOL IN RISHIKESH & DAILY SCHEDULE */}
       <ExperienceSection />
 
-      {/* SECTION 6: TEACHERS & GUIDANCE */}
+      {/* 7. TEACHERS & GUIDANCE */}
       <TeachersSection />
 
-      {/* SECTION 7: STUDENT EXPERIENCES & TESTIMONIALS */}
+      {/* 8. STUDENT EXPERIENCES & TESTIMONIALS */}
       <TestimonialsSection />
 
-      {/* SECTION 8: IMAGE GALLERY */}
+      {/* 9. LATEST BLOGS */}
+      <LatestBlogsSection />
+
+      {/* 10. IMAGE GALLERY */}
       <GallerySection />
 
-      {/* SECTION 9: CALL TO ACTION */}
+      {/* 11. CALL TO ACTION & ADMISSIONS */}
       <CtaSection />
     </>
   );

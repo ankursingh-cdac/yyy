@@ -8,9 +8,9 @@
 
 export const BRAND_COLORS = {
   // Primary Warm Saffron Orange
-  brandOrange: "#F58220",       // Primary brand color, logo emblem, buttons, action highlights
-  brandOrangeHover: "#D96E14",  // WCAG compliant hover state
-  brandOrangeLight: "#FFF4EB",  // Soft tint for badges and highlights
+  brandOrange: "#FF8A27",       // Primary radiant saffron orange, logo emblem, buttons, highlights
+  brandOrangeHover: "#E67312",  // WCAG compliant hover state
+  brandOrangeLight: "#FFF6ED",  // Soft tint for badges and highlights
   
   // Warm Faded Red & Terracotta
   brandTerracotta: "#C3512F",       // Fee tables, schedule highlights, badges
